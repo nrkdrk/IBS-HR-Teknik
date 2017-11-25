@@ -1,0 +1,30 @@
+D:\software\IBS\IBS-HR\IBS-HR\bin\Debug\IBS-HR.exe.config
+D:\software\IBS\IBS-HR\IBS-HR\bin\Debug\IBS-HR.exe
+D:\software\IBS\IBS-HR\IBS-HR\bin\Debug\IBS-HR.pdb
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS-HR.csprojResolveAssemblyReference.cache
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS_HR.Form1.resources
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS_HR.Properties.Resources.resources
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS-HR.csproj.GenerateResource.Cache
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS-HR.csproj.CoreCompileInputs.cache
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS-HR.exe
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS-HR.pdb
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS_HR.RandevuForm.resources
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS_HR.HomeForm.resources
+D:\software\IBS\IBS-HR\IBS-HR\obj\Debug\IBS_HR.CikisDialog.resources
+D:\software\IBS\IBS-HR\IBS-HR\bin\Debug\Flat By DocXi.dll
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\bin\Debug\IBS-HR.exe.config
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\bin\Debug\IBS-HR.exe
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\bin\Debug\IBS-HR.pdb
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS-HR.csprojResolveAssemblyReference.cache
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS_HR.CikisDialog.resources
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS_HR.HomeForm.resources
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS_HR.Properties.Resources.resources
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS-HR.csproj.GenerateResource.Cache
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS-HR.csproj.CoreCompileInputs.cache
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS-HR.exe
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS-HR.pdb
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS_HR.TeknikKayit.resources
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS_HR.AnaMenu.resources
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS_HR.TeknikİslemlerForm.resources
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS_HR.İnformationDialog.resources
+C:\Users\TEKNIK-2\Desktop\berk project\IBS-HR\IBS-HR\obj\Debug\IBS_HR.TeknikListeForm.resources

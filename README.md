@@ -15,5 +15,14 @@ IBS-HR-Teknik Servis takip uygulaması
 Ana Menü(Main Menu)
 ![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/AnaMenu.PNG)
 
+Hakkında(About)
+![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/Hakkında.PNG)
 
+Hibe Kayıt(grant registration)
+![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/HibeKayıt.PNG)
 
+Menu Teknik Kayıt(Technical Registration)
+![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/MenuTeknikKayıt.PNG)
+
+Menu Teknik İslemler(Technical Works)
+![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/Teknikİslemler.PNG)

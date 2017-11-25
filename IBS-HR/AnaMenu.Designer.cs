@@ -198,6 +198,7 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(185, 52);
             this.panel10.TabIndex = 9;
+            this.panel10.Click += new System.EventHandler(this.panel10_Click);
             // 
             // pictureBox10
             // 
@@ -218,6 +219,7 @@
             this.label8.Size = new System.Drawing.Size(93, 18);
             this.label8.TabIndex = 0;
             this.label8.Text = "Servise Kayıt";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel5
             // 

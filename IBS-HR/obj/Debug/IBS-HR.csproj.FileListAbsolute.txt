@@ -46,3 +46,4 @@ C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS-HR.exe
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS-HR.pdb
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.HibeKayıt.resources
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.HibeListe.resources
+C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.Servis_Kayıt.resources

@@ -1,6 +1,6 @@
 ﻿namespace IBS_HR
 {
-    partial class TeknikKayit
+    partial class HibeKayıt
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
@@ -52,6 +53,7 @@
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox5);
+            this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.dateTimePicker1);
@@ -68,8 +70,8 @@
             this.panel1.ForeColor = System.Drawing.Color.PaleTurquoise;
             this.panel1.Location = new System.Drawing.Point(12, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(866, 408);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(866, 396);
+            this.panel1.TabIndex = 1;
             // 
             // button4
             // 
@@ -78,7 +80,7 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.button4.Image = null;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(355, 332);
+            this.button4.Location = new System.Drawing.Point(355, 341);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 41);
             this.button4.TabIndex = 12;
@@ -88,15 +90,15 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(216, 66);
+            this.label5.Location = new System.Drawing.Point(207, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(92, 13);
             this.label5.TabIndex = 34;
-            this.label5.Text = "Teslim Alma Tarihi";
+            this.label5.Text = "Hibe Alınma Tarihi";
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(219, 82);
+            this.dateTimePicker1.Location = new System.Drawing.Point(210, 87);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 7;
@@ -104,7 +106,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(9, 119);
+            this.label6.Location = new System.Drawing.Point(11, 128);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(108, 13);
             this.label6.TabIndex = 31;
@@ -112,16 +114,16 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 135);
+            this.textBox6.Location = new System.Drawing.Point(14, 144);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(181, 182);
+            this.textBox6.Size = new System.Drawing.Size(396, 182);
             this.textBox6.TabIndex = 3;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(9, 66);
+            this.label4.Location = new System.Drawing.Point(11, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 25;
@@ -129,7 +131,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(12, 82);
+            this.textBox4.Location = new System.Drawing.Point(14, 87);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(181, 20);
             this.textBox4.TabIndex = 2;
@@ -137,24 +139,24 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(216, 119);
+            this.label3.Location = new System.Drawing.Point(423, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 13);
+            this.label3.Size = new System.Drawing.Size(99, 13);
             this.label3.TabIndex = 23;
-            this.label3.Text = "Ürün Yanında Gelen Aksesuar";
+            this.label3.Text = "Hibe Edilme Sebebi";
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(219, 135);
+            this.textBox3.Location = new System.Drawing.Point(426, 144);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 182);
+            this.textBox3.Size = new System.Drawing.Size(423, 182);
             this.textBox3.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(216, 17);
+            this.label2.Location = new System.Drawing.Point(207, 22);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(30, 13);
             this.label2.TabIndex = 21;
@@ -162,7 +164,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(219, 36);
+            this.textBox2.Location = new System.Drawing.Point(210, 41);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(200, 20);
             this.textBox2.TabIndex = 4;
@@ -170,7 +172,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(9, 17);
+            this.label1.Location = new System.Drawing.Point(11, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(36, 13);
             this.label1.TabIndex = 19;
@@ -178,29 +180,38 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 36);
+            this.textBox1.Location = new System.Drawing.Point(14, 41);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 20);
             this.textBox1.TabIndex = 1;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(426, 38);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(112, 17);
+            this.checkBox1.TabIndex = 35;
+            this.checkBox1.Text = "Hibe Edilme Onayı";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(440, 20);
+            this.label7.Location = new System.Drawing.Point(423, 68);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 13);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Ürün Arıza Açıklama";
+            this.label7.Size = new System.Drawing.Size(143, 13);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Hibe Edilme Onayı Veren Kişi";
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(443, 36);
-            this.textBox5.Multiline = true;
+            this.textBox5.Location = new System.Drawing.Point(426, 87);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(416, 281);
-            this.textBox5.TabIndex = 35;
+            this.textBox5.Size = new System.Drawing.Size(200, 20);
+            this.textBox5.TabIndex = 36;
             // 
-            // TeknikKayit
+            // HibeKayıt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -208,8 +219,8 @@
             this.ClientSize = new System.Drawing.Size(883, 543);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TeknikKayit";
-            this.Text = "RandevuForm";
+            this.Name = "HibeKayıt";
+            this.Text = "HibeKayıt";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -219,10 +230,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.CheckBox checkBox1;
         private MonoFlat.Button button4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
@@ -232,7 +242,9 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

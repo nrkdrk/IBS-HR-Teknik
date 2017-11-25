@@ -14,17 +14,7 @@ namespace IBS_HR
     {
         bool flag = false;
         int onlinealtmenuControl = 0;
-        int hibealtmenuControl = 0;
-        int hibealtmenuControl1 = 0;
-        public static int lastEpisode = 0;
-
-        /*lastEpisode nedir
-         *Anasayfa=0 
-         *Online Destek=1 
-         *Randevu İşlemleri=2 
-         *Devir İşlemleri=3 
-         *Raporlama=4
-         *Detaylı Raporlama=5*/
+                
         public AnaMenu()
         {
             InitializeComponent();
@@ -131,14 +121,12 @@ namespace IBS_HR
                 onlinealtmenuControl = 1;
                 label9.Text = "Teknik Takip";
                 label9.Visible = true;
-                lastEpisode = 1;
             }
             else if (onlinealtmenuControl == 1)
             {
                 onlinealtmenu.Visible = false;
                 onlinealtmenuControl = 0;
                 label9.Text = "Ana Sayfa";
-                lastEpisode = 0;
             }
         }
 
@@ -160,14 +148,12 @@ namespace IBS_HR
                 onlinealtmenuControl = 1;
                 label9.Text = "Teknik Takip";
                 label9.Visible = true;
-                lastEpisode = 1;
             }
             else if (onlinealtmenuControl == 1)
             {
                 onlinealtmenu.Visible = false;
                 onlinealtmenuControl = 0;
                 label9.Text="Ana Sayfa";
-                lastEpisode = 0;
             }
         }
 
@@ -181,7 +167,6 @@ namespace IBS_HR
             teknikKayit.Dock = DockStyle.Fill;
             teknikKayit.Show();
             label9.Text = "Teknik Servis Kayıt";
-            lastEpisode = 2;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -194,7 +179,6 @@ namespace IBS_HR
             teknikKayit.Dock = DockStyle.Fill;
             teknikKayit.Show();
             label9.Text = "Teknik Servis Kayıt";
-            lastEpisode = 2;
         }
         
         private void panel5_Click(object sender, EventArgs e)
@@ -207,7 +191,6 @@ namespace IBS_HR
             teknikİslemlerForm.Dock = DockStyle.Fill;
             teknikİslemlerForm.Show();
             label9.Text = "Teknik İşlemler";
-            lastEpisode = 2;
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -220,7 +203,6 @@ namespace IBS_HR
             teknikİslemlerForm.Dock = DockStyle.Fill;
             teknikİslemlerForm.Show();
             label9.Text = "Teknik İşlemler";
-            lastEpisode = 2;
         }
 
         private void panel8_Click(object sender, EventArgs e)
@@ -233,7 +215,6 @@ namespace IBS_HR
             teknikListe.Dock = DockStyle.Fill;
             teknikListe.Show();
             label9.Text = "Teknik İşlemler Liste";
-            lastEpisode = 2;
         }
 
         private void label5_Click(object sender, EventArgs e)
@@ -246,7 +227,54 @@ namespace IBS_HR
             teknikListe.Dock = DockStyle.Fill;
             teknikListe.Show();
             label9.Text = "Teknik İşlemler Liste";
-            lastEpisode = 2;
+        }
+
+        private void panel6_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            HibeKayıt hibeKayıt = new HibeKayıt();
+            hibeKayıt.TopLevel = false;
+            hibeKayıt.AutoScroll = true;
+            homePanel.Controls.Add(hibeKayıt);
+            hibeKayıt.Dock = DockStyle.Fill;
+            hibeKayıt.Show();
+            label9.Text = "Hibe Kayıt";
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            HibeKayıt hibeKayıt = new HibeKayıt();
+            hibeKayıt.TopLevel = false;
+            hibeKayıt.AutoScroll = true;
+            homePanel.Controls.Add(hibeKayıt);
+            hibeKayıt.Dock = DockStyle.Fill;
+            hibeKayıt.Show();
+            label9.Text = "Hibe Kayıt";
+        }
+
+        private void panel9_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            HibeListe hibeListe = new HibeListe();
+            hibeListe.TopLevel = false;
+            hibeListe.AutoScroll = true;
+            homePanel.Controls.Add(hibeListe);
+            hibeListe.Dock = DockStyle.Fill;
+            hibeListe.Show();
+            label9.Text = "Hibe Liste";
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            HibeListe hibeListe = new HibeListe();
+            hibeListe.TopLevel = false;
+            hibeListe.AutoScroll = true;
+            homePanel.Controls.Add(hibeListe);
+            hibeListe.Dock = DockStyle.Fill;
+            hibeListe.Show();
+            label9.Text = "Hibe Liste";
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace IBS_HR
 {
-    partial class TeknikListeForm
+    partial class HibeListe
     {
         /// <summary>
         /// Required designer variable.
@@ -39,10 +39,10 @@
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(8, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(866, 533);
-            this.panel1.TabIndex = 2;
+            this.panel1.TabIndex = 3;
             // 
             // dataGridView1
             // 
@@ -52,16 +52,15 @@
             this.dataGridView1.Size = new System.Drawing.Size(835, 504);
             this.dataGridView1.TabIndex = 0;
             // 
-            // TeknikListeForm
+            // HibeListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(883, 557);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "TeknikListeForm";
-            this.Text = "TeknikListe";
+            this.Name = "HibeListe";
+            this.Text = "HibeListe";
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

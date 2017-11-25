@@ -60,6 +60,18 @@
     <Compile Include="AnaMenu.Designer.cs">
       <DependentUpon>AnaMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="HibeKayıt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HibeKayıt.Designer.cs">
+      <DependentUpon>HibeKayıt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HibeListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HibeListe.Designer.cs">
+      <DependentUpon>HibeListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="HomeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +109,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HibeKayıt.resx">
+      <DependentUpon>HibeKayıt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HibeListe.resx">
+      <DependentUpon>HibeListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.cs</DependentUpon>

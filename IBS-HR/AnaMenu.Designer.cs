@@ -215,9 +215,9 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(49, 17);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(122, 18);
+            this.label8.Size = new System.Drawing.Size(93, 18);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Servise Gidilecek";
+            this.label8.Text = "Servise Kayıt";
             // 
             // panel5
             // 
@@ -401,9 +401,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(47, 15);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 18);
+            this.label2.Size = new System.Drawing.Size(149, 18);
             this.label2.TabIndex = 0;
-            this.label2.Text = "Teknik | Hibe";
+            this.label2.Text = "Teknik | Hibe | Servis";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // panel3

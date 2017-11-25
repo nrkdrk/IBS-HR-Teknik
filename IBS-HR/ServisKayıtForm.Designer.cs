@@ -86,7 +86,7 @@
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(416, 281);
-            this.textBox5.TabIndex = 35;
+            this.textBox5.TabIndex = 7;
             // 
             // button4
             // 
@@ -116,7 +116,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(219, 82);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // label6
             // 
@@ -166,7 +166,7 @@
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(200, 182);
-            this.textBox3.TabIndex = 5;
+            this.textBox3.TabIndex = 6;
             // 
             // label2
             // 

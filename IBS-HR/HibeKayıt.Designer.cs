@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.button4 = new MonoFlat.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -42,9 +45,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -72,6 +72,32 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(866, 396);
             this.panel1.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(423, 68);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(143, 13);
+            this.label7.TabIndex = 37;
+            this.label7.Text = "Hibe Edilme Onayı Veren Kişi";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(426, 87);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(200, 20);
+            this.textBox5.TabIndex = 7;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(426, 38);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(112, 17);
+            this.checkBox1.TabIndex = 6;
+            this.checkBox1.Text = "Hibe Edilme Onayı";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // button4
             // 
@@ -101,7 +127,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(210, 87);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // label6
             // 
@@ -151,7 +177,7 @@
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(423, 182);
-            this.textBox3.TabIndex = 5;
+            this.textBox3.TabIndex = 8;
             // 
             // label2
             // 
@@ -184,32 +210,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 20);
             this.textBox1.TabIndex = 1;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(426, 38);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(112, 17);
-            this.checkBox1.TabIndex = 35;
-            this.checkBox1.Text = "Hibe Edilme Onayı";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(423, 68);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(143, 13);
-            this.label7.TabIndex = 37;
-            this.label7.Text = "Hibe Edilme Onayı Veren Kişi";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(426, 87);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(200, 20);
-            this.textBox5.TabIndex = 36;
             // 
             // HibeKayıt
             // 

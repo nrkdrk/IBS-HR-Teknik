@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button1 = new MonoFlat.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.button1 = new MonoFlat.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -80,78 +80,90 @@
             this.panel1.Size = new System.Drawing.Size(866, 408);
             this.panel1.TabIndex = 1;
             // 
-            // dataGridView1
+            // checkBox3
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 14);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(835, 137);
-            this.dataGridView1.TabIndex = 0;
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(19, 183);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(80, 17);
+            this.checkBox3.TabIndex = 2;
+            this.checkBox3.Text = "İşlem Onayı";
+            this.checkBox3.UseVisualStyleBackColor = true;
             // 
-            // checkBox1
+            // label7
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.checkBox1.Location = new System.Drawing.Point(135, 164);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(84, 17);
-            this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "İşleme Alındı";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label7.Location = new System.Drawing.Point(16, 303);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(61, 13);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "İşlem Tutarı";
             // 
-            // label1
+            // textBox3
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label1.Location = new System.Drawing.Point(16, 208);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "İşlem";
+            this.textBox3.Location = new System.Drawing.Point(19, 319);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(200, 20);
+            this.textBox3.TabIndex = 5;
             // 
-            // textBox1
+            // label6
             // 
-            this.textBox1.Location = new System.Drawing.Point(19, 224);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 20);
-            this.textBox1.TabIndex = 20;
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(506, 184);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 49;
+            this.label6.Text = "Sevk Bilgileri";
             // 
-            // label5
+            // textBox2
             // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label5.Location = new System.Drawing.Point(16, 252);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(92, 13);
-            this.label5.TabIndex = 36;
-            this.label5.Text = "İşleme Alma Tarihi";
+            this.textBox2.Location = new System.Drawing.Point(509, 205);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(342, 134);
+            this.textBox2.TabIndex = 9;
             // 
-            // dateTimePicker1
+            // checkBox2
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(19, 268);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 35;
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(509, 161);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(79, 17);
+            this.checkBox2.TabIndex = 8;
+            this.checkBox2.Text = "Sevk Edildi";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label2.Location = new System.Drawing.Point(16, 165);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(13, 13);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "0";
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label4.Location = new System.Drawing.Point(16, 355);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(126, 13);
+            this.label4.TabIndex = 46;
+            this.label4.Text = "İşlem Tamamlanma Tarihi";
             // 
-            // label3
+            // dateTimePicker2
             // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label3.Location = new System.Drawing.Point(57, 165);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
-            this.label3.TabIndex = 38;
-            this.label3.Text = "Numaralı Ürün";
+            this.dateTimePicker2.Location = new System.Drawing.Point(19, 371);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker2.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BG = System.Drawing.Color.LightSeaGreen;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.button1.Image = null;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(620, 350);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(146, 41);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "Kaydet";
+            this.button1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // label9
             // 
@@ -169,92 +181,80 @@
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(230, 210);
-            this.textBox7.TabIndex = 42;
+            this.textBox7.TabIndex = 7;
             // 
-            // button1
+            // label3
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BG = System.Drawing.Color.LightSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.button1.Image = null;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(620, 350);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 41);
-            this.button1.TabIndex = 44;
-            this.button1.Text = "Kaydet";
-            this.button1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label3.Location = new System.Drawing.Point(57, 165);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.TabIndex = 38;
+            this.label3.Text = "Numaralı Ürün";
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label4.Location = new System.Drawing.Point(16, 355);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(126, 13);
-            this.label4.TabIndex = 46;
-            this.label4.Text = "İşlem Tamamlanma Tarihi";
+            this.label2.AutoSize = true;
+            this.label2.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label2.Location = new System.Drawing.Point(16, 165);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "0";
             // 
-            // dateTimePicker2
+            // label5
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(19, 371);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker2.TabIndex = 45;
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label5.Location = new System.Drawing.Point(16, 252);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(92, 13);
+            this.label5.TabIndex = 36;
+            this.label5.Text = "İşleme Alma Tarihi";
             // 
-            // label6
+            // dateTimePicker1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(506, 184);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
-            this.label6.TabIndex = 49;
-            this.label6.Text = "Sevk Bilgileri";
+            this.dateTimePicker1.Location = new System.Drawing.Point(19, 268);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 4;
             // 
-            // textBox2
+            // label1
             // 
-            this.textBox2.Location = new System.Drawing.Point(509, 205);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(342, 134);
-            this.textBox2.TabIndex = 48;
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label1.Location = new System.Drawing.Point(16, 208);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "İşlem";
             // 
-            // checkBox2
+            // textBox1
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(509, 161);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(79, 17);
-            this.checkBox2.TabIndex = 47;
-            this.checkBox2.Text = "Sevk Edildi";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(19, 224);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 20);
+            this.textBox1.TabIndex = 3;
             // 
-            // label7
+            // checkBox1
             // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.label7.Location = new System.Drawing.Point(16, 303);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(61, 13);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "İşlem Tutarı";
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.checkBox1.Location = new System.Drawing.Point(135, 164);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(84, 17);
+            this.checkBox1.TabIndex = 1;
+            this.checkBox1.Text = "İşleme Alındı";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // dataGridView1
             // 
-            this.textBox3.Location = new System.Drawing.Point(19, 319);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(200, 20);
-            this.textBox3.TabIndex = 50;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(19, 183);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 52;
-            this.checkBox3.Text = "İşlem Onayı";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(16, 14);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(835, 137);
+            this.dataGridView1.TabIndex = 0;
             // 
             // TeknikİslemlerForm
             // 

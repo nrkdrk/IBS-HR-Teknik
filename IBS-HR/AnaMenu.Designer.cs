@@ -169,6 +169,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(185, 52);
             this.panel11.TabIndex = 10;
+            this.panel11.Click += new System.EventHandler(this.panel11_Click);
             // 
             // pictureBox11
             // 
@@ -186,9 +187,10 @@
             this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(49, 17);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(138, 18);
+            this.label11.Size = new System.Drawing.Size(95, 18);
             this.label11.TabIndex = 0;
-            this.label11.Text = "Servise Gidilecekler";
+            this.label11.Text = "Servis Listesi";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // panel10
             // 
@@ -216,9 +218,9 @@
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(49, 17);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 18);
+            this.label8.Size = new System.Drawing.Size(85, 18);
             this.label8.TabIndex = 0;
-            this.label8.Text = "Servise Kayıt";
+            this.label8.Text = "Servis Kayıt";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // panel5

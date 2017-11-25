@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.button4 = new MonoFlat.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -42,8 +44,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,23 @@
             this.panel1.Size = new System.Drawing.Size(866, 408);
             this.panel1.TabIndex = 0;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(440, 20);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(102, 13);
+            this.label7.TabIndex = 36;
+            this.label7.Text = "Ürün Arıza Açıklama";
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(443, 36);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(416, 281);
+            this.textBox5.TabIndex = 7;
+            // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
@@ -81,7 +98,7 @@
             this.button4.Location = new System.Drawing.Point(355, 332);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 41);
-            this.button4.TabIndex = 12;
+            this.button4.TabIndex = 8;
             this.button4.Text = "Kaydet";
             this.button4.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
@@ -99,7 +116,7 @@
             this.dateTimePicker1.Location = new System.Drawing.Point(219, 82);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.TabIndex = 5;
             // 
             // label6
             // 
@@ -149,7 +166,7 @@
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(200, 182);
-            this.textBox3.TabIndex = 5;
+            this.textBox3.TabIndex = 6;
             // 
             // label2
             // 
@@ -182,23 +199,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(181, 20);
             this.textBox1.TabIndex = 1;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(440, 20);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 13);
-            this.label7.TabIndex = 36;
-            this.label7.Text = "Ürün Arıza Açıklama";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(443, 36);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(416, 281);
-            this.textBox5.TabIndex = 35;
             // 
             // TeknikKayit
             // 

@@ -300,5 +300,29 @@ namespace IBS_HR
             servis_Kayıt.Show();
             label9.Text = "Servis Kayıt";
         }
+
+        private void panel11_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            ServisListeForm servisListeForm = new ServisListeForm();
+            servisListeForm.TopLevel = false;
+            servisListeForm.AutoScroll = true;
+            homePanel.Controls.Add(servisListeForm);
+            servisListeForm.Dock = DockStyle.Fill;
+            servisListeForm.Show();
+            label9.Text = "Servis Liste";
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            ServisListeForm servisListeForm = new ServisListeForm();
+            servisListeForm.TopLevel = false;
+            servisListeForm.AutoScroll = true;
+            homePanel.Controls.Add(servisListeForm);
+            servisListeForm.Dock = DockStyle.Fill;
+            servisListeForm.Show();
+            label9.Text = "Servis Liste";
+        }
     }
 }

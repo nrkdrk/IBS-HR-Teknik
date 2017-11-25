@@ -1,5 +1,5 @@
 
-[![N|Solid](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/nrkdrk.png)
+![N|Solid](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/nrkdrk.png)
 
 # IBS-HR-Teknik
 IBS-HR-Teknik Servis takip uygulaması

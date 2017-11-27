@@ -20,8 +20,8 @@ Ana Menü(Main Menu)
 Hibe Kayıt(grant registration)
 ![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/HibeKayıt.PNG)
 
-Menu Teknik Kayıt(Technical Registration)
+Teknik Kayıt(Technical Registration)
 ![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/MenuTeknikKayıt.PNG)
 
-Menu Teknik İslemler(Technical Works)
+Teknik İslemler(Technical Works)
 ![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/Teknikİslemler.PNG)

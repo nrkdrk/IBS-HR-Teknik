@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace IBS_HR
 {
@@ -14,18 +15,87 @@ namespace IBS_HR
     {
         bool flag = false;
         int onlinealtmenuControl = 0;
-
         public AnaMenu()
         {
-            InitializeComponent();
-            panel4.BackColor = Color.FromArgb(47, 79, 79);
-            homePanel.Controls.Clear();
-            HomeForm RandevuForm = new HomeForm();
-            RandevuForm.TopLevel = false;
-            RandevuForm.AutoScroll = true;
-            homePanel.Controls.Add(RandevuForm);
-            RandevuForm.Dock = DockStyle.Fill;
-            RandevuForm.Show();
+            Boolean processResult = SqlConn();
+            if (processResult == true)
+            {
+                InitializeComponent();
+                panel4.BackColor = Color.FromArgb(47, 79, 79);
+                homePanel.Controls.Clear();
+                HomeForm RandevuForm = new HomeForm();
+                RandevuForm.TopLevel = false;
+                RandevuForm.AutoScroll = true;
+                homePanel.Controls.Add(RandevuForm);
+                RandevuForm.Dock = DockStyle.Fill;
+                RandevuForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Kontrol Başarısız, Giriş Yapılamaz");
+            }
+        }
+
+        static Boolean SqlConn()
+        {
+            Boolean processResult = false;
+            try
+            {
+                string dbName = "IBSHR";
+                SqlConnection connection = new SqlConnection("server=.\\SQLEXPRESS;database=master; Integrated Security=SSPI");
+                SqlCommand command = new SqlCommand("SELECT Count(name) FROM master.dbo.sysdatabases WHERE name=@prmVeritabani", connection);
+                command.Parameters.AddWithValue("@prmVeriTabani", dbName);
+                connection.Open();
+
+                int sonuc = (int)command.ExecuteScalar();
+                if (sonuc != 0)
+                {
+                    MessageBox.Show("Kontrol Başarılı, Giriş Yapılabilir");
+                    processResult = true;
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Programı İlk Defa Kullanıdığınız Tespit Edildi.\n Veri Tabanı Kurulumu Yapılsın mı ?", "IBS-HR Teknik Servis", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        command.CommandText = "Create Database " + dbName;
+                        command.ExecuteNonQuery();
+                        connection.Close();
+
+                        string connectionString = "server=.\\SQLEXPRESS; database=IBSHR; integrated security=SSPI; User id = sa; Password=nrkdrk;";
+                        using (SqlConnection tolustur = new SqlConnection(connectionString))
+                            try
+                            {
+                                
+                                 tolustur.Open();
+                                 using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner char(100)," +
+                                     "contact char(255),address char(255),product char(100),delivery_date date,accessory char(255),explanation char(255));", tolustur))
+                                    TechnicalRecordCommand.ExecuteNonQuery();
+                                MessageBox.Show("İlk Kurulum Başarılı Oldu.");
+                                processResult = true;
+
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Kurgu Hazırlanırken Hata." + ex.Message);
+                                processResult = false;
+                            }
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        processResult = false;
+                    }
+                    
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Yerel Sunucu İle Bağlantı Başarısız. \n" + ex.Message);
+                MessageBox.Show("Yerel Sunucu Bağlantısı Başarısız. Giriş Yapılamaz.");
+                processResult = false;
+            }
+            return processResult;
         }
 
         private void panel2_MouseDown(object sender, MouseEventArgs e)

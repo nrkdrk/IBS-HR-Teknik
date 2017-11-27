@@ -101,6 +101,7 @@
             this.button4.TabIndex = 12;
             this.button4.Text = "Kaydet";
             this.button4.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // label5
             // 

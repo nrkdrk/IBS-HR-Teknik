@@ -32,7 +32,16 @@ namespace IBS_HR
             }
             else
             {
-                MessageBox.Show("Kontrol Başarısız, Giriş Yapılamaz");
+                UnsuccessfulDialog unsuccessfulDialog = new UnsuccessfulDialog();
+                DialogResult dialogResult = unsuccessfulDialog.ShowDialog();
+                if (dialogResult == DialogResult.OK)
+                {
+                    //do processing
+                }
+                else
+                {
+                    //do processing
+                }
             }
         }
 
@@ -48,9 +57,18 @@ namespace IBS_HR
                 connection.Open();
 
                 int sonuc = (int)command.ExecuteScalar();
-                if (sonuc != 0)
-                {
-                    MessageBox.Show("Kontrol Başarılı, Giriş Yapılabilir");
+                if (sonuc != 0) {
+
+                    SuccessfulDialog successfulDialog = new SuccessfulDialog();
+                    DialogResult dialogResult = successfulDialog.ShowDialog();
+                    if (dialogResult == DialogResult.OK)
+                    {
+                        //do processing
+                    }
+                    else
+                    {
+                        //do processing
+                    }
                     processResult = true;
                 }
                 else
@@ -66,14 +84,12 @@ namespace IBS_HR
                         using (SqlConnection tolustur = new SqlConnection(connectionString))
                             try
                             {
-                                
-                                 tolustur.Open();
-                                 using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner char(100)," +
-                                     "contact char(255),address char(255),product char(100),delivery_date date,accessory char(255),explanation char(255));", tolustur))
-                                    TechnicalRecordCommand.ExecuteNonQuery();
+                                tolustur.Open();
+                                using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner char(100)," +
+                                "contact char(255),address char(255),product char(100),delivery_date date,accessory char(255),explanation char(255));", tolustur))
+                                TechnicalRecordCommand.ExecuteNonQuery();
                                 MessageBox.Show("İlk Kurulum Başarılı Oldu.");
                                 processResult = true;
-
                             }
                             catch (Exception ex)
                             {
@@ -118,7 +134,7 @@ namespace IBS_HR
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            CikisDialog CikisDialog = new CikisDialog();
+            ExitDialog CikisDialog = new ExitDialog();
 
             // Show testDialog as a modal dialog and determine if DialogResult = OK.
             if (CikisDialog.ShowDialog(this) == DialogResult.OK)
@@ -133,7 +149,7 @@ namespace IBS_HR
 
         private void exitPanel_Click(object sender, EventArgs e)
         {
-            CikisDialog CikisDialog = new CikisDialog();
+            ExitDialog CikisDialog = new ExitDialog();
 
             // Show testDialog as a modal dialog and determine if DialogResult = OK.
             if (CikisDialog.ShowDialog(this) == DialogResult.OK)
@@ -148,7 +164,7 @@ namespace IBS_HR
 
         private void ExitLabel_Click(object sender, EventArgs e)
         {
-            CikisDialog CikisDialog = new CikisDialog();
+            ExitDialog CikisDialog = new ExitDialog();
 
             // Show testDialog as a modal dialog and determine if DialogResult = OK.
             if (CikisDialog.ShowDialog(this) == DialogResult.OK)
@@ -209,8 +225,7 @@ namespace IBS_HR
             homePanel.Controls.Add(RandevuForm);
             RandevuForm.Dock = DockStyle.Fill;
             RandevuForm.Show();
-
-
+        
             if (onlinealtmenuControl == 0)
             {
                 onlinealtmenu.Visible = true;

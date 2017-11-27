@@ -25,7 +25,7 @@ namespace IBS_HR
                 SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand("INSERT INTO TechnicalRecord(owner,contact,address,product,delivery_date,accessory,explanation)" +
-                    " VALUES (@name,@contact,@address,@product,@delivery_date,@accessory,@explanation)", sqlConnection);
+                " VALUES (@name,@contact,@address,@product,@delivery_date,@accessory,@explanation)", sqlConnection);
                 sqlCommand.Parameters.AddWithValue("@name", textBox1.Text);
                 sqlCommand.Parameters.AddWithValue("@contact", textBox4.Text);
                 sqlCommand.Parameters.AddWithValue("@address", textBox6.Text);
@@ -34,6 +34,12 @@ namespace IBS_HR
                 sqlCommand.Parameters.AddWithValue("@accessory", textBox3.Text);
                 sqlCommand.Parameters.AddWithValue("@explanation", textBox5.Text);
                 sqlCommand.ExecuteNonQuery();
+                textBox1.Text= String.Empty;
+                textBox2.Text = String.Empty;
+                textBox3.Text = String.Empty;
+                textBox4.Text = String.Empty;
+                textBox5.Text = String.Empty;
+                textBox6.Text = String.Empty;
                 MessageBox.Show("Kayıt Edildi");
             }
             catch (Exception ex)

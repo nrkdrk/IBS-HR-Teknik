@@ -48,11 +48,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CikisDialog.cs">
+    <Compile Include="ExitDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CikisDialog.Designer.cs">
-      <DependentUpon>CikisDialog.cs</DependentUpon>
+    <Compile Include="ExitDialog.Designer.cs">
+      <DependentUpon>ExitDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="AnaMenu.cs">
       <SubType>Form</SubType>
@@ -92,6 +92,12 @@
     <Compile Include="ServisListeForm.Designer.cs">
       <DependentUpon>ServisListeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SuccessfulDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuccessfulDialog.Designer.cs">
+      <DependentUpon>SuccessfulDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeknikKayitForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,14 +116,20 @@
     <Compile Include="TeknikİslemlerForm.Designer.cs">
       <DependentUpon>TeknikİslemlerForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="UnsuccessfulDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UnsuccessfulDialog.Designer.cs">
+      <DependentUpon>UnsuccessfulDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="İnformationDialog.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="İnformationDialog.Designer.cs">
       <DependentUpon>İnformationDialog.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CikisDialog.resx">
-      <DependentUpon>CikisDialog.cs</DependentUpon>
+    <EmbeddedResource Include="ExitDialog.resx">
+      <DependentUpon>ExitDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.cs</DependentUpon>
@@ -146,6 +158,9 @@
     <EmbeddedResource Include="ServisListeForm.resx">
       <DependentUpon>ServisListeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SuccessfulDialog.resx">
+      <DependentUpon>SuccessfulDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeknikKayitForm.resx">
       <DependentUpon>TeknikKayitForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +169,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TeknikİslemlerForm.resx">
       <DependentUpon>TeknikİslemlerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UnsuccessfulDialog.resx">
+      <DependentUpon>UnsuccessfulDialog.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="İnformationDialog.resx">
       <DependentUpon>İnformationDialog.cs</DependentUpon>

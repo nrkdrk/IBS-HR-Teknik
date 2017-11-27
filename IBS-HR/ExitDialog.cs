@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IBS_HR
 {
-    public partial class CikisDialog : Form
+    public partial class ExitDialog : Form
     {
-        public CikisDialog()
+        public ExitDialog()
         {
             InitializeComponent();
         }

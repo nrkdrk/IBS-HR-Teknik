@@ -1,6 +1,6 @@
 ﻿namespace IBS_HR
 {
-    partial class CikisDialog
+    partial class ExitDialog
     {
         /// <summary>
         /// Required designer variable.

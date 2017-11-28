@@ -87,8 +87,8 @@ namespace IBS_HR
                             try
                             {
                                 tolustur.Open();
-                                using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner char(100)," +
-                                "contact char(255),address char(255),product char(100),delivery_date date,accessory char(255),explanation char(255));", tolustur))
+                                using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner varchar(100)," +
+                                "contact varchar(255),address varchar(255),product varchar(100),delivery_date date,accessory varchar(255),explanation varchar(255));", tolustur))
                                 TechnicalRecordCommand.ExecuteNonQuery();
                                 MessageBox.Show("İlk Kurulum Başarılı Oldu.");
                                 processResult = true;

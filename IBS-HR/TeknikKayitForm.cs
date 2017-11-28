@@ -22,19 +22,26 @@ namespace IBS_HR
 
         private void button4_Click(object sender, EventArgs e)
         {
+            String name = textBox1.Text;
+            String contact = textBox4.Text;
+            String address = textBox6.Text;
+            String product = textBox2.Text;
+            String delivery_date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            String accessory = textBox3.Text;
+            String explanation = textBox5.Text;
             try
             {
                 SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
                 sqlConnection.Open();
                 SqlCommand sqlCommand = new SqlCommand("INSERT INTO TechnicalRecord(owner,contact,address,product,delivery_date,accessory,explanation)" +
                 " VALUES (@name,@contact,@address,@product,@delivery_date,@accessory,@explanation)", sqlConnection);
-                sqlCommand.Parameters.AddWithValue("@name", textBox1.Text);
-                sqlCommand.Parameters.AddWithValue("@contact", textBox4.Text);
-                sqlCommand.Parameters.AddWithValue("@address", textBox6.Text);
-                sqlCommand.Parameters.AddWithValue("@product", textBox2.Text);
-                sqlCommand.Parameters.AddWithValue("@delivery_date", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
-                sqlCommand.Parameters.AddWithValue("@accessory", textBox3.Text);
-                sqlCommand.Parameters.AddWithValue("@explanation", textBox5.Text);
+                sqlCommand.Parameters.Add("@name",name);
+                sqlCommand.Parameters.Add("@contact",contact);
+                sqlCommand.Parameters.Add("@address",address);
+                sqlCommand.Parameters.Add("@product",product);
+                sqlCommand.Parameters.Add("@delivery_date",delivery_date);
+                sqlCommand.Parameters.Add("@accessory",accessory);
+                sqlCommand.Parameters.Add("@explanation",explanation);
                 sqlCommand.ExecuteNonQuery();
                 textBox1.Text= String.Empty;
                 textBox2.Text = String.Empty;

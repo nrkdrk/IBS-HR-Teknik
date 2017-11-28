@@ -50,3 +50,5 @@ C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.ServisL
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.SuccessfulDialog.resources
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.ExitDialog.resources
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.UnsuccessfulDialog.resources
+C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.TeknikViewForm.resources
+C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.UpdateDialogForm.resources

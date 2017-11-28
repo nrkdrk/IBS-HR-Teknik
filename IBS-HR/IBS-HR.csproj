@@ -110,6 +110,12 @@
     <Compile Include="TeknikListeForm.Designer.cs">
       <DependentUpon>TeknikListeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TeknikViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TeknikViewForm.Designer.cs">
+      <DependentUpon>TeknikViewForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="TeknikİslemlerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,12 @@
     </Compile>
     <Compile Include="UnsuccessfulDialog.Designer.cs">
       <DependentUpon>UnsuccessfulDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateDialogForm.Designer.cs">
+      <DependentUpon>UpdateDialogForm.cs</DependentUpon>
     </Compile>
     <Compile Include="İnformationDialog.cs">
       <SubType>Form</SubType>
@@ -167,11 +179,17 @@
     <EmbeddedResource Include="TeknikListeForm.resx">
       <DependentUpon>TeknikListeForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeknikViewForm.resx">
+      <DependentUpon>TeknikViewForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TeknikİslemlerForm.resx">
       <DependentUpon>TeknikİslemlerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UnsuccessfulDialog.resx">
       <DependentUpon>UnsuccessfulDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateDialogForm.resx">
+      <DependentUpon>UpdateDialogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="İnformationDialog.resx">
       <DependentUpon>İnformationDialog.cs</DependentUpon>

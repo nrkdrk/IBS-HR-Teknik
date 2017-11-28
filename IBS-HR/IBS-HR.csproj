@@ -80,6 +80,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProvinceInstallationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProvinceInstallationDialog.Designer.cs">
+      <DependentUpon>ProvinceInstallationDialog.cs</DependentUpon>
+    </Compile>
     <Compile Include="ServisKayıtForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ProvinceInstallationDialog.resx">
+      <DependentUpon>ProvinceInstallationDialog.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ServisKayıtForm.resx">
       <DependentUpon>ServisKayıtForm.cs</DependentUpon>
     </EmbeddedResource>

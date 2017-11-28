@@ -52,3 +52,4 @@ C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.ExitDia
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.UnsuccessfulDialog.resources
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.TeknikViewForm.resources
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.UpdateDialogForm.resources
+C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.ProvinceInstallationDialog.resources

@@ -90,7 +90,16 @@ namespace IBS_HR
                                 using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner varchar(100)," +
                                 "contact varchar(255),address varchar(255),product varchar(100),delivery_date date,accessory varchar(255),explanation varchar(255));", tolustur))
                                 TechnicalRecordCommand.ExecuteNonQuery();
-                                MessageBox.Show("İlk Kurulum Başarılı Oldu.");
+                                ProvinceInstallationDialog provinceInstallationDialog = new ProvinceInstallationDialog();
+                                DialogResult dialogResult1 = provinceInstallationDialog.ShowDialog();
+                                if (dialogResult1== DialogResult.OK)
+                                {
+                                    //do processing
+                                }
+                                else
+                                {
+                                    //do processing
+                                }
                                 processResult = true;
                             }
                             catch (Exception ex)
@@ -137,7 +146,6 @@ namespace IBS_HR
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ExitDialog CikisDialog = new ExitDialog();
-
             // Show testDialog as a modal dialog and determine if DialogResult = OK.
             if (CikisDialog.ShowDialog(this) == DialogResult.OK)
             {
@@ -152,7 +160,6 @@ namespace IBS_HR
         private void exitPanel_Click(object sender, EventArgs e)
         {
             ExitDialog CikisDialog = new ExitDialog();
-
             // Show testDialog as a modal dialog and determine if DialogResult = OK.
             if (CikisDialog.ShowDialog(this) == DialogResult.OK)
             {
@@ -167,7 +174,6 @@ namespace IBS_HR
         private void ExitLabel_Click(object sender, EventArgs e)
         {
             ExitDialog CikisDialog = new ExitDialog();
-
             // Show testDialog as a modal dialog and determine if DialogResult = OK.
             if (CikisDialog.ShowDialog(this) == DialogResult.OK)
             {

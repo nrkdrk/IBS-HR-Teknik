@@ -1,4 +1,6 @@
-﻿using System;
+﻿/*Berk Can www.nrkdrk.com | https://github.com/nrkdrk/IBS-HR-Teknik */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

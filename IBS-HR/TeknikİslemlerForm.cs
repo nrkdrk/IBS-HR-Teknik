@@ -1,4 +1,6 @@
-﻿using System;
+﻿/*Berk Can www.nrkdrk.com | https://github.com/nrkdrk/IBS-HR-Teknik */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +19,8 @@ namespace IBS_HR
         {
             InitializeComponent();
         }
+
+        string id;
 
         private void TeknikİslemlerForm_Load(object sender, EventArgs e)
         {
@@ -38,6 +42,20 @@ namespace IBS_HR
             dataGridView1.Columns[5].HeaderText = "Teslim Alınma";
             dataGridView1.Columns[6].HeaderText = "Aksesuar";
             dataGridView1.Columns[7].HeaderText = "Arıza";
+        }
+
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                id= row.Cells[0].Value.ToString();
+                label2.Text = id;
+            }
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            MessageBox.Show(id);
         }
     }
 }

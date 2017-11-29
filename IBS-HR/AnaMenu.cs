@@ -46,7 +46,6 @@ namespace IBS_HR
                 }
             }
         }
-
         static Boolean SqlConn()
         {
             Boolean processResult = false;
@@ -60,7 +59,6 @@ namespace IBS_HR
 
                 int sonuc = (int)command.ExecuteScalar();
                 if (sonuc != 0) {
-
                     SuccessfulDialog successfulDialog = new SuccessfulDialog();
                     DialogResult dialogResult = successfulDialog.ShowDialog();
                     if (dialogResult == DialogResult.OK)
@@ -84,35 +82,42 @@ namespace IBS_HR
 
                         string connectionString = "server=.\\SQLEXPRESS; database=IBSHR; integrated security=SSPI; User id = sa; Password=nrkdrk;";
                         using (SqlConnection tolustur = new SqlConnection(connectionString))
-                            try
+                        try
+                        {
+                            /*Veri tabanında tablolarımızı oluşturuyoruz*/
+                            tolustur.Open();
+                            /*Teknik Servis kayıt Tablosu*/
+                            using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner varchar(100)," +
+                            "contact varchar(255),address varchar(255),product varchar(100),delivery_date date,accessory varchar(255),explanation varchar(255));", tolustur))
+                            TechnicalRecordCommand.ExecuteNonQuery();
+                            /*Teknik İşlemler tablosu*/
+                            using (SqlCommand TechnicalOperationsCommand = new SqlCommand("CREATE TABLE TechnicalOperations(id int IDENTITY(1,1),TRId varchar(100)," +
+                            "processed bit,approval bit,operation varchar(100),reception_date date,fee varchar(255),completion_date date,operations_carried varchar(255)," +
+                            "forwarding bit,referral_clarification varchar(255)); ", tolustur))
+                            TechnicalOperationsCommand.ExecuteNonQuery();
+                                
+                            ProvinceInstallationDialog provinceInstallationDialog = new ProvinceInstallationDialog();
+                            DialogResult dialogResult1 = provinceInstallationDialog.ShowDialog();
+                            if (dialogResult1== DialogResult.OK)
                             {
-                                tolustur.Open();
-                                using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner varchar(100)," +
-                                "contact varchar(255),address varchar(255),product varchar(100),delivery_date date,accessory varchar(255),explanation varchar(255));", tolustur))
-                                TechnicalRecordCommand.ExecuteNonQuery();
-                                ProvinceInstallationDialog provinceInstallationDialog = new ProvinceInstallationDialog();
-                                DialogResult dialogResult1 = provinceInstallationDialog.ShowDialog();
-                                if (dialogResult1== DialogResult.OK)
-                                {
-                                    //do processing
-                                }
-                                else
-                                {
-                                    //do processing
-                                }
-                                processResult = true;
+                                //do processing
                             }
-                            catch (Exception ex)
+                            else
                             {
-                                MessageBox.Show("Kurgu Hazırlanırken Hata." + ex.Message);
-                                processResult = false;
+                                //do processing
                             }
+                            processResult = true;
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Kurgu Hazırlanırken Hata." + ex.Message);
+                            processResult = false;
+                        }
                     }
                     else if (dialogResult == DialogResult.No)
                     {
                         processResult = false;
-                    }
-                    
+                    }                    
                 }
                 connection.Close();
             }
@@ -124,12 +129,10 @@ namespace IBS_HR
             }
             return processResult;
         }
-
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             flag = true;
         }
-
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (flag == true)
@@ -137,12 +140,10 @@ namespace IBS_HR
                 this.Location = Cursor.Position;
             }
         }
-
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
             flag = false;
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             ExitDialog CikisDialog = new ExitDialog();
@@ -156,7 +157,6 @@ namespace IBS_HR
                 //do processing
             }
         }
-
         private void exitPanel_Click(object sender, EventArgs e)
         {
             ExitDialog CikisDialog = new ExitDialog();
@@ -170,7 +170,6 @@ namespace IBS_HR
                 //do processing
             }
         }
-
         private void ExitLabel_Click(object sender, EventArgs e)
         {
             ExitDialog CikisDialog = new ExitDialog();
@@ -184,7 +183,6 @@ namespace IBS_HR
                 //do processing
             }
         }
-
         private void pictureBox8_Click(object sender, EventArgs e)
         {
             İnformationDialog informationDialog = new İnformationDialog();
@@ -197,7 +195,6 @@ namespace IBS_HR
                 //do processing
             }
         }
-
         private void panel4_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -223,7 +220,6 @@ namespace IBS_HR
                 label9.Text = "Ana Sayfa";
             }
         }
-
         private void label2_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -233,7 +229,6 @@ namespace IBS_HR
             homePanel.Controls.Add(RandevuForm);
             RandevuForm.Dock = DockStyle.Fill;
             RandevuForm.Show();
-        
             if (onlinealtmenuControl == 0)
             {
                 onlinealtmenu.Visible = true;
@@ -249,7 +244,6 @@ namespace IBS_HR
                 label9.Text = "Ana Sayfa";
             }
         }
-
         private void panel7_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -261,7 +255,6 @@ namespace IBS_HR
             teknikKayit.Show();
             label9.Text = "Teknik Servis Kayıt";
         }
-
         private void label4_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -273,7 +266,6 @@ namespace IBS_HR
             teknikKayit.Show();
             label9.Text = "Teknik Servis Kayıt";
         }
-
         private void panel5_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -285,7 +277,6 @@ namespace IBS_HR
             teknikİslemlerForm.Show();
             label9.Text = "Teknik İşlemler";
         }
-
         private void label3_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -297,7 +288,6 @@ namespace IBS_HR
             teknikİslemlerForm.Show();
             label9.Text = "Teknik İşlemler";
         }
-
         private void panel8_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -309,7 +299,6 @@ namespace IBS_HR
             teknikListe.Show();
             label9.Text = "Teknik İşlemler Liste";
         }
-
         private void label5_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -321,7 +310,6 @@ namespace IBS_HR
             teknikListe.Show();
             label9.Text = "Teknik İşlemler Liste";
         }
-
         private void panel6_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -333,7 +321,6 @@ namespace IBS_HR
             hibeKayıt.Show();
             label9.Text = "Hibe Kayıt";
         }
-
         private void label6_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -345,7 +332,6 @@ namespace IBS_HR
             hibeKayıt.Show();
             label9.Text = "Hibe Kayıt";
         }
-
         private void panel9_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -357,7 +343,6 @@ namespace IBS_HR
             hibeListe.Show();
             label9.Text = "Hibe Liste";
         }
-
         private void label7_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -369,7 +354,6 @@ namespace IBS_HR
             hibeListe.Show();
             label9.Text = "Hibe Liste";
         }
-
         private void panel10_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -381,7 +365,6 @@ namespace IBS_HR
             servis_Kayıt.Show();
             label9.Text = "Servis Kayıt";
         }
-
         private void label8_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -393,7 +376,6 @@ namespace IBS_HR
             servis_Kayıt.Show();
             label9.Text = "Servis Kayıt";
         }
-
         private void panel11_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();
@@ -405,7 +387,6 @@ namespace IBS_HR
             servisListeForm.Show();
             label9.Text = "Servis Liste";
         }
-
         private void label11_Click(object sender, EventArgs e)
         {
             homePanel.Controls.Clear();

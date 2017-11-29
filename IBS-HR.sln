@@ -9,6 +9,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Description = IBS-HR Teknik Servis
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{E6987AC2-07D4-40AA-8D14-27A35699CBBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

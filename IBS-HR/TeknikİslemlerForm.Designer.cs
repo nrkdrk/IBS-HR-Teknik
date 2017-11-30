@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -80,6 +80,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(866, 408);
             this.panel1.TabIndex = 1;
+            this.panel1.Click += new System.EventHandler(this.panel1_Click);
             // 
             // checkBox3
             // 
@@ -165,6 +166,7 @@
             this.button1.TabIndex = 44;
             this.button1.Text = "Kaydet";
             this.button1.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label9
             // 
@@ -252,14 +254,14 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.PaleTurquoise;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DarkCyan;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Maroon;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.PaleTurquoise;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DarkCyan;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Maroon;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.Location = new System.Drawing.Point(11, 14);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
@@ -268,6 +270,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(844, 137);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
@@ -283,6 +286,7 @@
             this.Name = "TeknikİslemlerForm";
             this.Text = "TeknikİslemlerForm";
             this.Load += new System.EventHandler(this.TeknikİslemlerForm_Load);
+            this.Click += new System.EventHandler(this.TeknikİslemlerForm_Click);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -43,7 +43,7 @@ namespace IBS_HR
                 sqlCommand.Parameters.Add("@accessory",accessory);
                 sqlCommand.Parameters.Add("@explanation",explanation);
                 sqlCommand.ExecuteNonQuery();
-                textBox1.Text= String.Empty;
+                textBox1.Text = String.Empty;
                 textBox2.Text = String.Empty;
                 textBox3.Text = String.Empty;
                 textBox4.Text = String.Empty;

@@ -160,7 +160,6 @@ namespace IBS_HR
                 label2.Text = id;
                 SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
                 sqlConnection.Open();
-                button1.Text = "Güncelle";
                 using (sqlConnection)
                 {
                     using (SqlCommand command = new SqlCommand("select * from [TechnicalOperations] where id = @id", sqlConnection))
@@ -171,49 +170,40 @@ namespace IBS_HR
                         {
                             while (reader.Read())
                             {
-                                if(reader["TRId"].ToString()!=null)
+                                label2.Text = reader["TRId"].ToString();
+                                String processed = reader["processed"].ToString();
+                                String approval = reader["approval"].ToString();
+                                String forwarding = reader["forwarding"].ToString();
+                                if (processed == "True")
                                 {
-                                    label2.Text = reader["TRId"].ToString();
-                                    String processed = reader["processed"].ToString();
-                                    String approval = reader["approval"].ToString();
-                                    String forwarding = reader["forwarding"].ToString();
-                                    if (processed == "True")
-                                    {
-                                        checkBox1.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        checkBox1.Checked = false;
-                                    }
-                                    if (approval == "True")
-                                    {
-                                        checkBox3.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        checkBox3.Checked = false;
-                                    }
-                                    if (forwarding == "True")
-                                    {
-                                        checkBox2.Checked = true;
-                                    }
-                                    else
-                                    {
-                                        checkBox2.Checked = false;
-                                    }
-                                    textBox1.Text = reader["operation"].ToString();
-                                    dateTimePicker1.Value = (DateTime)reader["reception_date"];
-                                    textBox3.Text = reader["fee"].ToString();
-                                    dateTimePicker2.Value = (DateTime)reader["completion_date"];
-                                    textBox7.Text = reader["operations_carried"].ToString();
-                                    textBox2.Text = reader["referral_clarification"].ToString();
+                                    checkBox1.Checked = true;
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Teknik işlem değeri yok");
+                                    checkBox1.Checked = false;
                                 }
-                                
-                                
+                                if (approval == "True")
+                                {
+                                    checkBox3.Checked = true;
+                                }
+                                else
+                                {
+                                    checkBox3.Checked = false;
+                                }
+                                if (forwarding == "True")
+                                {
+                                    checkBox2.Checked = true;
+                                }
+                                else
+                                {
+                                    checkBox2.Checked = false;
+                                }
+                                textBox1.Text = reader["operation"].ToString();
+                                dateTimePicker1.Value = (DateTime)reader["reception_date"];
+                                textBox3.Text = reader["fee"].ToString();
+                                dateTimePicker2.Value = (DateTime)reader["completion_date"];
+                                textBox7.Text = reader["operations_carried"].ToString();
+                                textBox2.Text = reader["referral_clarification"].ToString();
                             }
                         }
                     }
@@ -231,7 +221,6 @@ namespace IBS_HR
             dateTimePicker2.Value = DateTime.Today;
             textBox7.Text = String.Empty;
             textBox2.Text = String.Empty;
-            button1.Text = "Kaydet";
         }
         private void panel1_Click(object sender, EventArgs e)
         {
@@ -244,7 +233,6 @@ namespace IBS_HR
             dateTimePicker2.Value = DateTime.Today;
             textBox7.Text = String.Empty;
             textBox2.Text = String.Empty;
-            button1.Text = "Kaydet";
         }
     }
 }

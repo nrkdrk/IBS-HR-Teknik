@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeknikViewForm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new MonoFlat.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button4 = new MonoFlat.Button();
@@ -54,7 +53,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox5);
             this.panel1.Controls.Add(this.button4);
@@ -75,20 +73,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(866, 383);
             this.panel1.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BG = System.Drawing.Color.LightSeaGreen;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.button1.Image = null;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(443, 332);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(146, 41);
-            this.button1.TabIndex = 37;
-            this.button1.Text = "Kaydı Sil";
-            this.button1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // label7
             // 
@@ -114,7 +98,7 @@
             this.button4.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.button4.Image = null;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(273, 332);
+            this.button4.Location = new System.Drawing.Point(361, 335);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(146, 41);
             this.button4.TabIndex = 8;
@@ -274,6 +258,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private MonoFlat.Button button1;
     }
 }

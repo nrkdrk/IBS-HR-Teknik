@@ -118,7 +118,6 @@ namespace IBS_HR
                 this.Close();
             }
         }
-
         private void TeknikViewForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             TeknikİslemlerForm teknikİslemlerForm = (TeknikİslemlerForm)Application.OpenForms["TeknikİslemlerForm"];

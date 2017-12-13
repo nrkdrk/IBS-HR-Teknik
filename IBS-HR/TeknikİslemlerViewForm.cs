@@ -105,6 +105,73 @@ namespace IBS_HR
             }
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+          /*  String id = label2.Text;
+            Boolean processed;
+            Boolean approval;
+            Boolean forwarding;
+            if (checkBox1.Checked == true)
+            {
+                processed = true;
+            }
+            else
+            {
+                processed = false;
+            }
+            if (checkBox3.Checked == true)
+            {
+                approval = true;
+            }
+            else
+            {
+                approval = false;
+            }
+            String operation = textBox1.Text;
+            String reception_date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            String fee = textBox3.Text;
+            String completion_date = dateTimePicker2.Value.ToString("yyyy-MM-dd");
+            String operations_carried = textBox7.Text;
+            if (checkBox2.Checked == true)
+            {
+                forwarding = true;
+            }
+            else
+            {
+                forwarding = false;
+            }
+            String referral_clarification = textBox2.Text;
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
+            sqlConnection.Open();
+            using (sqlConnection)
+            {
+                using (SqlCommand command = new SqlCommand("UPDATE  TechnicalOperations SET TRId=@TRId,processed=@processed," +
+                    "approval=@approval,forwarding=@forwarding,delivery_date=@delivery_date,accessory=@accessory," +
+                    "explanation=@explanation where id = @id", sqlConnection))
+                {
+                    command.Parameters.AddWithValue("@TRId", id);
+                    command.Parameters.Add("@processed", processed);
+                    command.Parameters.Add("@approval", approval);
+                    command.Parameters.Add("@forwarding", forwarding);
+                    command.Parameters.Add("@product", product);
+                    command.Parameters.Add("@delivery_date", delivery_date);
+                    command.Parameters.Add("@accessory", accessory);
+                    command.Parameters.Add("@explanation", explanation);
+                    command.ExecuteNonQuery();
+
+                    UpdateDialogForm updateDialogForm = new UpdateDialogForm();
+                    DialogResult dialogResult = updateDialogForm.ShowDialog();
+                    if (dialogResult == DialogResult.OK)
+                    {
+                        //do processing
+                    }
+                    else
+                    {
+                        //do processing
+                    }
+                }
+                this.Close();
+            }*/
+        }
     }
 }

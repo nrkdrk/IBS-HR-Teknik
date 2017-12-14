@@ -93,7 +93,7 @@ namespace IBS_HR
                             /*Teknik İşlemler tablosu*/
                             using (SqlCommand TechnicalOperationsCommand = new SqlCommand("CREATE TABLE TechnicalOperations(id int IDENTITY(1,1),TRId varchar(100)," +
                             "processed bit,approval bit,operation varchar(100),reception_date date,fee varchar(255),completion_date date,operations_carried varchar(255)," +
-                            "forwarding bit,referral_clarification varchar(255)); ", tolustur))
+                            "forwarding bit,referral_clarification varchar(255),delivery bit); ", tolustur))
                             TechnicalOperationsCommand.ExecuteNonQuery();
                                 
                             ProvinceInstallationDialog provinceInstallationDialog = new ProvinceInstallationDialog();
@@ -297,7 +297,7 @@ namespace IBS_HR
             homePanel.Controls.Add(teknikListe);
             teknikListe.Dock = DockStyle.Fill;
             teknikListe.Show();
-            label9.Text = "Teknik İşlemler Liste";
+            label9.Text = "Teknik İşleme Alınanlar";
         }
         private void label5_Click(object sender, EventArgs e)
         {
@@ -308,7 +308,7 @@ namespace IBS_HR
             homePanel.Controls.Add(teknikListe);
             teknikListe.Dock = DockStyle.Fill;
             teknikListe.Show();
-            label9.Text = "Teknik İşlemler Liste";
+            label9.Text = "Teknik İşleme Alınanlar";
         }
         private void panel6_Click(object sender, EventArgs e)
         {

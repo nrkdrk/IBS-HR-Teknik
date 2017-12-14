@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeknikİslemlerViewForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new MonoFlat.Button();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -57,6 +58,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.checkBox3);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textBox3);
@@ -80,6 +82,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(850, 268);
             this.panel1.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BG = System.Drawing.Color.LightSeaGreen;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.button2.Image = null;
+            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.Location = new System.Drawing.Point(678, 199);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(146, 41);
+            this.button2.TabIndex = 52;
+            this.button2.Text = "Teslim Et";
+            this.button2.TextAlignment = System.Drawing.StringAlignment.Center;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // checkBox3
             // 
@@ -159,7 +176,7 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.button1.Image = null;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(609, 199);
+            this.button1.Location = new System.Drawing.Point(514, 199);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 41);
             this.button1.TabIndex = 44;
@@ -321,5 +338,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label8;
+        private MonoFlat.Button button2;
     }
 }

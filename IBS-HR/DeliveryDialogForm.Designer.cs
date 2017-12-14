@@ -1,6 +1,6 @@
 ﻿namespace IBS_HR
 {
-    partial class UpdateDialogForm
+    partial class DeliveryDialogForm
     {
         /// <summary>
         /// Required designer variable.
@@ -40,17 +40,17 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.LightSeaGreen;
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(-4, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(233, 36);
-            this.panel1.TabIndex = 12;
+            this.panel1.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(84, 9);
+            this.label1.Location = new System.Drawing.Point(89, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 18);
             this.label1.TabIndex = 3;
@@ -63,23 +63,22 @@
             this.button1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.button1.Image = null;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(65, 94);
+            this.button1.Location = new System.Drawing.Point(67, 94);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 30);
-            this.button1.TabIndex = 15;
+            this.button1.TabIndex = 19;
             this.button1.Text = "Tamam";
             this.button1.TextAlignment = System.Drawing.StringAlignment.Center;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label3.Location = new System.Drawing.Point(85, 62);
+            this.label3.Location = new System.Drawing.Point(89, 62);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 18);
-            this.label3.TabIndex = 14;
+            this.label3.TabIndex = 18;
             this.label3.Text = "Başarılı";
             // 
             // label2
@@ -87,13 +86,13 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.DarkSlateGray;
-            this.label2.Location = new System.Drawing.Point(46, 44);
+            this.label2.Location = new System.Drawing.Point(66, 44);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 18);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Güncelleme İşlemi";
+            this.label2.Size = new System.Drawing.Size(101, 18);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Teslim Edilme";
             // 
-            // UpdateDialogForm
+            // DeliveryDialogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -103,9 +102,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "UpdateDialogForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "UpdateDialogForm";
+            this.Name = "DeliveryDialogForm";
+            this.Text = "DeliveryDialogForm";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeliveryDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeliveryDialogForm.Designer.cs">
+      <DependentUpon>DeliveryDialogForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExitDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     <Compile Include="İnformationDialog.Designer.cs">
       <DependentUpon>İnformationDialog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DeliveryDialogForm.resx">
+      <DependentUpon>DeliveryDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExitDialog.resx">
       <DependentUpon>ExitDialog.cs</DependentUpon>
     </EmbeddedResource>

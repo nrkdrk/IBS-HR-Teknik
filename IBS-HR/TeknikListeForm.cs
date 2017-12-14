@@ -22,11 +22,60 @@ namespace IBS_HR
         string id;
         private void TeknikListeForm_Load(object sender, EventArgs e)
         {
+            Boolean allRecords = false;
+            Boolean notDelivered = false;
+            Boolean delivered = false;
+            if (checkBox1.Checked == true)
+                allRecords = true;
+            if (checkBox2.Checked == true)
+                notDelivered = true;
+            if (checkBox3.Checked == true)
+                delivered = true;
+            if (allRecords == true)
+            {
+                SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
+                using (sqlConnection)
+                {
+                    sqlConnection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter("select * from TechnicalRecord order by id desc", sqlConnection);
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    dataGridView1.DataSource = ds.Tables[0];
+                    dataGridView1.Refresh();
+                }
+                dataGridView1.Columns[0].HeaderText = "İd";
+                dataGridView1.Columns[1].HeaderText = "Ürün Sahibi";
+                dataGridView1.Columns[2].HeaderText = "İletişim";
+                dataGridView1.Columns[3].HeaderText = "Adres";
+                dataGridView1.Columns[4].HeaderText = "Ürün";
+                dataGridView1.Columns[5].HeaderText = "Teslim Alınma";
+                dataGridView1.Columns[6].HeaderText = "Aksesuar";
+                dataGridView1.Columns[7].HeaderText = "Arıza";
+            }
+        }
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            TeknikİslemlerViewForm TeknikİslemlerViewForm = new TeknikİslemlerViewForm();
+            TeknikİslemlerViewForm.productId = id;
+            TeknikİslemlerViewForm.Show();
+        }
+        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        {
+            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+            {
+                id = row.Cells[0].Value.ToString();
+            }
+        }
+
+        private void checkBox1_Click(object sender, EventArgs e)
+        {
+            checkBox2.Checked = false;
+            checkBox3.Checked = false;
             SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
             using (sqlConnection)
             {
                 sqlConnection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter("select * from TechnicalRecord", sqlConnection);
+                SqlDataAdapter adapter = new SqlDataAdapter("select * from TechnicalRecord order by id desc", sqlConnection);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
@@ -42,19 +91,40 @@ namespace IBS_HR
             dataGridView1.Columns[7].HeaderText = "Arıza";
         }
 
-        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void checkBox2_Click(object sender, EventArgs e)
         {
-            TeknikİslemlerViewForm TeknikİslemlerViewForm = new TeknikİslemlerViewForm();
-            TeknikİslemlerViewForm.productId = id;
-            TeknikİslemlerViewForm.Show();
+            checkBox1.Checked = false;
+            checkBox3.Checked = false;
+            /*SELECT table1.ID, table2.*
+            FROM table1 
+            INNER JOIN table2 ON table1.ID = table2.id 
+            WHERE table1.ID= x AND table1.Column3 = 'y'
+            */
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
+            using (sqlConnection)
+            {
+                sqlConnection.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter("select * from TechnicalRecord order by id desc", sqlConnection);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Refresh();
+            }
+            dataGridView1.Columns[0].HeaderText = "İd";
+            dataGridView1.Columns[1].HeaderText = "Ürün Sahibi";
+            dataGridView1.Columns[2].HeaderText = "İletişim";
+            dataGridView1.Columns[3].HeaderText = "Adres";
+            dataGridView1.Columns[4].HeaderText = "Ürün";
+            dataGridView1.Columns[5].HeaderText = "Teslim Alınma";
+            dataGridView1.Columns[6].HeaderText = "Aksesuar";
+            dataGridView1.Columns[7].HeaderText = "Arıza";
         }
 
-        private void dataGridView1_SelectionChanged(object sender, EventArgs e)
+        private void checkBox3_Click(object sender, EventArgs e)
         {
-            foreach (DataGridViewRow row in dataGridView1.SelectedRows)
-            {
-                id = row.Cells[0].Value.ToString();
-            }
+            checkBox1.Checked = false;
+            checkBox2.Checked = false;
+            dataGridView1.DataSource = "";  
         }
     }
 }

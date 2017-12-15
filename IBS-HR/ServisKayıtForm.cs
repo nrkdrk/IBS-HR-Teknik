@@ -51,14 +51,6 @@ namespace IBS_HR
             {
                 MessageBox.Show("Kurgu Hazırlanırken Hata." + ex.Message);
             }
-            /* command.CommandText = "insert into TechnicalRecord (id, owner,contact,address,product,delivery_date,accessory,explanation)" +
-                 " VALUES (1, 'Ahmet Kelebek','05425701107','asdghahjdgahdgahjsdgjasjhdsha','laptop','27.11.2017','','ısınıyor')";
-             command.Connection = connection;
-
-
-             command.ExecuteNonQuery();
-             connection.Close();*/
-
         }
     }
 }

@@ -25,6 +25,7 @@ namespace IBS_HR
 
         private void TeknikİslemlerForm_Load(object sender, EventArgs e)
         {
+            dataGridView1.AllowUserToAddRows = false;
             SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
             using (sqlConnection)
             {
@@ -123,8 +124,8 @@ namespace IBS_HR
              {
                  SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
                  sqlConnection.Open();
-                 SqlCommand sqlCommand = new SqlCommand("INSERT INTO TechnicalOperations(TRId,processed,approval,operation,reception_date,fee,completion_date,operations_carried,forwarding,referral_clarification)" +
-                 " VALUES (@TRId,@processed,@approval,@operation,@reception_date,@fee,@completion_date,@operations_carried,@forwarding,@referral_clarification)", sqlConnection);
+                 SqlCommand sqlCommand = new SqlCommand("INSERT INTO TechnicalOperations(TRId,processed,approval,operation,reception_date,fee,completion_date,operations_carried,forwarding,referral_clarification,delivery)" +
+                 " VALUES (@TRId,@processed,@approval,@operation,@reception_date,@fee,@completion_date,@operations_carried,@forwarding,@referral_clarification,@delivery)", sqlConnection);
                  sqlCommand.Parameters.Add("@TRId", id);
                  sqlCommand.Parameters.Add("@processed", processed);
                  sqlCommand.Parameters.Add("@approval", approval);
@@ -135,8 +136,18 @@ namespace IBS_HR
                  sqlCommand.Parameters.Add("@operations_carried", operations_carried);
                  sqlCommand.Parameters.Add("@forwarding", forwarding);
                  sqlCommand.Parameters.Add("@referral_clarification", referral_clarification);
+                 sqlCommand.Parameters.Add("@delivery", "0");
                  sqlCommand.ExecuteNonQuery();
-                 MessageBox.Show("Kayıt Edildi");
+                 SavedDialogForm savedDialogForm = new SavedDialogForm();
+                 DialogResult dialogResult = savedDialogForm.ShowDialog();
+                 if (dialogResult == DialogResult.OK)
+                 {
+                    //do processing
+                 }
+                 else
+                 {
+                    //do processing
+                 }
              }
              catch (Exception ex)
              {

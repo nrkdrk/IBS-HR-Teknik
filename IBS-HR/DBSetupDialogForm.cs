@@ -1,6 +1,4 @@
-﻿/*Berk Can www.nrkdrk.com | https://github.com/nrkdrk/IBS-HR-Teknik */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,17 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace IBS_HR
 {
-    public partial class UnsuccessfulDialog : Form
+    public partial class DBSetupDialogForm : Form
     {
-        public UnsuccessfulDialog()
+        public DBSetupDialogForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+            this.DialogResult= DialogResult.OK;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }

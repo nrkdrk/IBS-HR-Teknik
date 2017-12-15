@@ -49,7 +49,16 @@ namespace IBS_HR
                 textBox4.Text = String.Empty;
                 textBox5.Text = String.Empty;
                 textBox6.Text = String.Empty;
-                MessageBox.Show("Kayıt Edildi");
+                SavedDialogForm savedDialogForm = new SavedDialogForm();
+                DialogResult dialogResult = savedDialogForm.ShowDialog();
+                if (dialogResult == DialogResult.OK)
+                {
+                    //do processing
+                }
+                else
+                {
+                    //do processing
+                }
             }
             catch (Exception ex)
             {

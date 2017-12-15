@@ -1,6 +1,4 @@
-﻿/*Berk Can www.nrkdrk.com | https://github.com/nrkdrk/IBS-HR-Teknik */
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,16 +10,16 @@ using System.Windows.Forms;
 
 namespace IBS_HR
 {
-    public partial class UnsuccessfulDialog : Form
+    public partial class SavedDialogForm : Form
     {
-        public UnsuccessfulDialog()
+        public SavedDialogForm()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
     }
 }

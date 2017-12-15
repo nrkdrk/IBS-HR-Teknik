@@ -55,3 +55,6 @@ C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.UpdateD
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.ProvinceInstallationDialog.resources
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.TeknikİslemlerViewForm.resources
 C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.DeliveryDialogForm.resources
+C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.UntreatedDialogForm.resources
+C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.SavedDialogForm.resources
+C:\Users\TEKNIK-2\Documents\GitHub\IBS-HR-Teknik\IBS-HR\obj\Debug\IBS_HR.DBSetupDialogForm.resources

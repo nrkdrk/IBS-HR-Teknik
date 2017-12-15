@@ -46,6 +46,7 @@ namespace IBS_HR
                 }
             }
         }
+
         static Boolean SqlConn()
         {
             Boolean processResult = false;
@@ -58,7 +59,8 @@ namespace IBS_HR
                 connection.Open();
 
                 int sonuc = (int)command.ExecuteScalar();
-                if (sonuc != 0) {
+                if (sonuc != 0)
+                {
                     SuccessfulDialog successfulDialog = new SuccessfulDialog();
                     DialogResult dialogResult = successfulDialog.ShowDialog();
                     if (dialogResult == DialogResult.OK)
@@ -79,45 +81,48 @@ namespace IBS_HR
                         command.CommandText = "Create Database " + dbName;
                         command.ExecuteNonQuery();
                         connection.Close();
-
                         string connectionString = "server=.\\SQLEXPRESS; database=IBSHR; integrated security=SSPI; User id = sa; Password=nrkdrk;";
                         using (SqlConnection tolustur = new SqlConnection(connectionString))
-                        try
-                        {
-                            /*Veri tabanında tablolarımızı oluşturuyoruz*/
-                            tolustur.Open();
-                            /*Teknik Servis kayıt Tablosu*/
-                            using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner varchar(100)," +
-                            "contact varchar(255),address varchar(255),product varchar(100),delivery_date date,accessory varchar(255),explanation varchar(255));", tolustur))
-                            TechnicalRecordCommand.ExecuteNonQuery();
-                            /*Teknik İşlemler tablosu*/
-                            using (SqlCommand TechnicalOperationsCommand = new SqlCommand("CREATE TABLE TechnicalOperations(id int IDENTITY(1,1),TRId varchar(100)," +
-                            "processed bit,approval bit,operation varchar(100),reception_date date,fee varchar(255),completion_date date,operations_carried varchar(255)," +
-                            "forwarding bit,referral_clarification varchar(255),delivery bit); ", tolustur))
-                            TechnicalOperationsCommand.ExecuteNonQuery();
-                                
-                            ProvinceInstallationDialog provinceInstallationDialog = new ProvinceInstallationDialog();
-                            DialogResult dialogResult1 = provinceInstallationDialog.ShowDialog();
-                            if (dialogResult1== DialogResult.OK)
+                            try
                             {
-                                //do processing
+                                /*Veri tabanında tablolarımızı oluşturuyoruz*/
+                                tolustur.Open();
+                                /*Teknik Servis kayıt Tablosu*/
+                                using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner varchar(100)," +
+                                "contact varchar(255),address varchar(255),product varchar(100),delivery_date date,accessory varchar(255),explanation varchar(255));", tolustur))
+                                    TechnicalRecordCommand.ExecuteNonQuery();
+                                /*Teknik İşlemler tablosu*/
+                                using (SqlCommand TechnicalOperationsCommand = new SqlCommand("CREATE TABLE TechnicalOperations(id int IDENTITY(1,1),TRId varchar(100)," +
+                                "processed bit,approval bit,operation varchar(100),reception_date date,fee varchar(255),completion_date date,operations_carried varchar(255)," +
+                                "forwarding bit,referral_clarification varchar(255),delivery bit); ", tolustur))
+                                    TechnicalOperationsCommand.ExecuteNonQuery();
+                                /*Hibe İşlemler tablosu*/
+                                using (SqlCommand GrantOperationsCommand = new SqlCommand("CREATE TABLE GrantOperations(id int IDENTITY(1,1),owner varchar(100)," +
+                                "product varchar(100),confirmation bit,contact varchar(100),reception_date date,approval_holder varchar(100),address varchar(100),why varchar(255)); ", tolustur))
+                                GrantOperationsCommand.ExecuteNonQuery();
+
+                                ProvinceInstallationDialog provinceInstallationDialog = new ProvinceInstallationDialog();
+                                DialogResult dialogResult1 = provinceInstallationDialog.ShowDialog();
+                                if (dialogResult1 == DialogResult.OK)
+                                {
+                                    //do processing
+                                }
+                                else
+                                {
+                                    //do processing
+                                }
+                                processResult = true;
                             }
-                            else
+                            catch (Exception ex)
                             {
-                                //do processing
+                                MessageBox.Show("Kurgu Hazırlanırken Hata." + ex.Message);
+                                processResult = false;
                             }
-                            processResult = true;
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show("Kurgu Hazırlanırken Hata." + ex.Message);
-                            processResult = false;
-                        }
                     }
                     else if (dialogResult == DialogResult.No)
                     {
                         processResult = false;
-                    }                    
+                    }
                 }
                 connection.Close();
             }
@@ -129,6 +134,7 @@ namespace IBS_HR
             }
             return processResult;
         }
+
         private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
             flag = true;

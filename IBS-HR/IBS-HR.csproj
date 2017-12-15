@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DBSetupDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBSetupDialogForm.Designer.cs">
+      <DependentUpon>DBSetupDialogForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="DeliveryDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,12 @@
     </Compile>
     <Compile Include="ProvinceInstallationDialog.Designer.cs">
       <DependentUpon>ProvinceInstallationDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SavedDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SavedDialogForm.Designer.cs">
+      <DependentUpon>SavedDialogForm.cs</DependentUpon>
     </Compile>
     <Compile Include="ServisKayıtForm.cs">
       <SubType>Form</SubType>
@@ -146,6 +158,12 @@
     <Compile Include="UnsuccessfulDialog.Designer.cs">
       <DependentUpon>UnsuccessfulDialog.cs</DependentUpon>
     </Compile>
+    <Compile Include="UntreatedDialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UntreatedDialogForm.Designer.cs">
+      <DependentUpon>UntreatedDialogForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UpdateDialogForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +176,9 @@
     <Compile Include="İnformationDialog.Designer.cs">
       <DependentUpon>İnformationDialog.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DBSetupDialogForm.resx">
+      <DependentUpon>DBSetupDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DeliveryDialogForm.resx">
       <DependentUpon>DeliveryDialogForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +209,9 @@
     <EmbeddedResource Include="ProvinceInstallationDialog.resx">
       <DependentUpon>ProvinceInstallationDialog.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SavedDialogForm.resx">
+      <DependentUpon>SavedDialogForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ServisKayıtForm.resx">
       <DependentUpon>ServisKayıtForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +238,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UnsuccessfulDialog.resx">
       <DependentUpon>UnsuccessfulDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UntreatedDialogForm.resx">
+      <DependentUpon>UntreatedDialogForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateDialogForm.resx">
       <DependentUpon>UpdateDialogForm.cs</DependentUpon>

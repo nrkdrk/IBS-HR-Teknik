@@ -22,6 +22,7 @@ namespace IBS_HR
         string id;
         private void TeknikListeForm_Load(object sender, EventArgs e)
         {
+            dataGridView1.AllowUserToAddRows = false;
             Boolean allRecords = false;
             Boolean notDelivered = false;
             Boolean delivered = false;
@@ -57,7 +58,32 @@ namespace IBS_HR
         {
             TeknikİslemlerViewForm TeknikİslemlerViewForm = new TeknikİslemlerViewForm();
             TeknikİslemlerViewForm.productId = id;
-            TeknikİslemlerViewForm.Show();
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
+            sqlConnection.Open();
+            using (sqlConnection)
+            {
+                using (SqlCommand command = new SqlCommand("select * from [TechnicalOperations] where TRId = @id", sqlConnection))
+                {
+                    command.Parameters.AddWithValue("@id", id);
+                    object obj = command.ExecuteScalar();
+                    if (obj == null)
+                    {
+                        UntreatedDialogForm untreatedDialogForm = new UntreatedDialogForm();
+                        if (untreatedDialogForm.ShowDialog(this) == DialogResult.OK)
+                        {
+                            //do processing
+                        }
+                        else
+                        {
+                            //do processing
+                        }
+                    }
+                    else
+                    {
+                        TeknikİslemlerViewForm.Show();
+                    }
+                }
+            }
         }
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
@@ -95,16 +121,12 @@ namespace IBS_HR
         {
             checkBox1.Checked = false;
             checkBox3.Checked = false;
-            /*SELECT table1.ID, table2.*
-            FROM table1 
-            INNER JOIN table2 ON table1.ID = table2.id 
-            WHERE table1.ID= x AND table1.Column3 = 'y'
-            */
             SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
             using (sqlConnection)
             {
                 sqlConnection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter("select * from TechnicalRecord order by id desc", sqlConnection);
+                SqlDataAdapter adapter = new SqlDataAdapter("select TechnicalRecord.id, TechnicalOperations. * from TechnicalRecord" +
+                    " INNER JOIN TechnicalOperations ON TechnicalRecord.id=TechnicalOperations.TRId WHERE TechnicalOperations.delivery='0'", sqlConnection);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
@@ -124,7 +146,25 @@ namespace IBS_HR
         {
             checkBox1.Checked = false;
             checkBox2.Checked = false;
-            dataGridView1.DataSource = "";  
+            SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
+            using (sqlConnection)
+            {
+                sqlConnection.Open();
+                SqlDataAdapter adapter = new SqlDataAdapter("select TechnicalRecord.id, TechnicalOperations. * from TechnicalRecord" +
+                    " INNER JOIN TechnicalOperations ON TechnicalRecord.id=TechnicalOperations.TRId WHERE TechnicalOperations.delivery='1'", sqlConnection);
+                DataSet ds = new DataSet();
+                adapter.Fill(ds);
+                dataGridView1.DataSource = ds.Tables[0];
+                dataGridView1.Refresh();
+            }
+            dataGridView1.Columns[0].HeaderText = "İd";
+            dataGridView1.Columns[1].HeaderText = "Ürün Sahibi";
+            dataGridView1.Columns[2].HeaderText = "İletişim";
+            dataGridView1.Columns[3].HeaderText = "Adres";
+            dataGridView1.Columns[4].HeaderText = "Ürün";
+            dataGridView1.Columns[5].HeaderText = "Teslim Alınma";
+            dataGridView1.Columns[6].HeaderText = "Aksesuar";
+            dataGridView1.Columns[7].HeaderText = "Arıza";
         }
     }
 }

@@ -269,7 +269,7 @@
             this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
             this.pictureBox7.Location = new System.Drawing.Point(10, 10);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox7.Size = new System.Drawing.Size(33, 32);
             this.pictureBox7.TabIndex = 3;
             this.pictureBox7.TabStop = false;
             // 
@@ -300,7 +300,7 @@
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.Location = new System.Drawing.Point(10, 10);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(33, 30);
+            this.pictureBox5.Size = new System.Drawing.Size(33, 32);
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
             // 

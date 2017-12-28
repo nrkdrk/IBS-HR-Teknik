@@ -99,7 +99,7 @@ namespace IBS_HR
                                 /*Hibe İşlemler tablosu*/
                                 using (SqlCommand GrantOperationsCommand = new SqlCommand("CREATE TABLE GrantOperations(id int IDENTITY(1,1),owner varchar(100)," +
                                 "product varchar(100),confirmation bit,contact varchar(100),reception_date date,approval_holder varchar(100),address varchar(100),why varchar(255)); ", tolustur))
-                                GrantOperationsCommand.ExecuteNonQuery();
+                                    GrantOperationsCommand.ExecuteNonQuery();                               
 
                                 ProvinceInstallationDialog provinceInstallationDialog = new ProvinceInstallationDialog();
                                 DialogResult dialogResult1 = provinceInstallationDialog.ShowDialog();

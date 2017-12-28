@@ -286,9 +286,9 @@
             this.label8.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.label8.Location = new System.Drawing.Point(12, 9);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 24);
+            this.label8.Size = new System.Drawing.Size(248, 24);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Teknik İşlemler";
+            this.label8.Text = "Teknik İşlem Sonu Teslim Et";
             // 
             // TeknikİslemlerViewForm
             // 

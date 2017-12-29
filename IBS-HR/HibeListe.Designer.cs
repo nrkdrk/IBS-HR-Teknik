@@ -40,9 +40,9 @@
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.panel1.Location = new System.Drawing.Point(8, 12);
+            this.panel1.Location = new System.Drawing.Point(1, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(866, 533);
+            this.panel1.Size = new System.Drawing.Size(882, 533);
             this.panel1.TabIndex = 3;
             // 
             // dataGridView1
@@ -56,13 +56,13 @@
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Maroon;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 13);
+            this.dataGridView1.Location = new System.Drawing.Point(5, 13);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.White;
             this.dataGridView1.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.DarkCyan;
             this.dataGridView1.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(835, 506);
+            this.dataGridView1.Size = new System.Drawing.Size(870, 506);
             this.dataGridView1.TabIndex = 2;
             // 
             // HibeListe
@@ -70,7 +70,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightGray;
-            this.ClientSize = new System.Drawing.Size(883, 557);
+            this.ClientSize = new System.Drawing.Size(885, 557);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HibeListe";

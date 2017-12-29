@@ -92,7 +92,6 @@ namespace IBS_HR
                 id = row.Cells[0].Value.ToString();
             }
         }
-
         private void checkBox1_Click(object sender, EventArgs e)
         {
             checkBox2.Checked = false;
@@ -116,7 +115,6 @@ namespace IBS_HR
             dataGridView1.Columns[6].HeaderText = "Aksesuar";
             dataGridView1.Columns[7].HeaderText = "Arıza";
         }
-
         private void checkBox2_Click(object sender, EventArgs e)
         {
             checkBox1.Checked = false;
@@ -125,23 +123,23 @@ namespace IBS_HR
             using (sqlConnection)
             {
                 sqlConnection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter("select TechnicalRecord.id, TechnicalOperations. * from TechnicalRecord" +
+                SqlDataAdapter adapter = new SqlDataAdapter("select TechnicalRecord.owner,TechnicalRecord.contact,TechnicalRecord.address," +
+                    "TechnicalRecord.product,TechnicalOperations.processed,TechnicalOperations.operations_carried,TechnicalOperations.fee,TechnicalOperations.delivery from TechnicalRecord" +
                     " INNER JOIN TechnicalOperations ON TechnicalRecord.id=TechnicalOperations.TRId WHERE TechnicalOperations.delivery='0'", sqlConnection);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
                 dataGridView1.Refresh();
             }
-            /*dataGridView1.Columns[0].HeaderText = "İd";
-            dataGridView1.Columns[1].HeaderText = "Ürün Sahibi";
-            dataGridView1.Columns[2].HeaderText = "İletişim";
-            dataGridView1.Columns[3].HeaderText = "Adres";
-            dataGridView1.Columns[4].HeaderText = "Ürün";
-            dataGridView1.Columns[5].HeaderText = "Teslim Alınma";
-            dataGridView1.Columns[6].HeaderText = "Aksesuar";
-            dataGridView1.Columns[7].HeaderText = "Arıza";*/
+            dataGridView1.Columns[0].HeaderText = "Ürün Sahibi";
+            dataGridView1.Columns[1].HeaderText = "İletişim";
+            dataGridView1.Columns[2].HeaderText = "Adres";
+            dataGridView1.Columns[3].HeaderText = "Ürün";
+            dataGridView1.Columns[4].HeaderText = "İşlem Durumu";
+            dataGridView1.Columns[5].HeaderText = "İşlem Detayı";
+            dataGridView1.Columns[6].HeaderText = "İşlem Tutarı";
+            dataGridView1.Columns[7].HeaderText = "Teslim Durumu";
         }
-
         private void checkBox3_Click(object sender, EventArgs e)
         {
             checkBox1.Checked = false;
@@ -150,21 +148,22 @@ namespace IBS_HR
             using (sqlConnection)
             {
                 sqlConnection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter("select TechnicalRecord.id, TechnicalOperations. * from TechnicalRecord" +
+                SqlDataAdapter adapter = new SqlDataAdapter("select TechnicalRecord.owner,TechnicalRecord.contact,TechnicalRecord.address," +
+                    "TechnicalRecord.product,TechnicalOperations.processed,TechnicalOperations.operations_carried,TechnicalOperations.fee,TechnicalOperations.delivery from TechnicalRecord" +
                     " INNER JOIN TechnicalOperations ON TechnicalRecord.id=TechnicalOperations.TRId WHERE TechnicalOperations.delivery='1'", sqlConnection);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
                 dataGridView1.Refresh();
             }
-           /* dataGridView1.Columns[0].HeaderText = "İd";
-            dataGridView1.Columns[1].HeaderText = "Ürün Sahibi";
-            dataGridView1.Columns[2].HeaderText = "İletişim";
-            dataGridView1.Columns[3].HeaderText = "Adres";
-            dataGridView1.Columns[4].HeaderText = "Ürün";
-            dataGridView1.Columns[5].HeaderText = "Teslim Alınma";
-            dataGridView1.Columns[6].HeaderText = "Aksesuar";
-            dataGridView1.Columns[7].HeaderText = "Arıza";*/
+            dataGridView1.Columns[0].HeaderText = "Ürün Sahibi";
+            dataGridView1.Columns[1].HeaderText = "İletişim";
+            dataGridView1.Columns[2].HeaderText = "Adres";
+            dataGridView1.Columns[3].HeaderText = "Ürün";
+            dataGridView1.Columns[4].HeaderText = "İşlem Durumu";
+            dataGridView1.Columns[5].HeaderText = "İşlem Detayı";
+            dataGridView1.Columns[6].HeaderText = "İşlem Tutarı";
+            dataGridView1.Columns[7].HeaderText = "Teslim Durumu";
         }
     }
 }

@@ -99,7 +99,11 @@ namespace IBS_HR
                                 /*Hibe İşlemler tablosu*/
                                 using (SqlCommand GrantOperationsCommand = new SqlCommand("CREATE TABLE GrantOperations(id int IDENTITY(1,1),owner varchar(100)," +
                                 "product varchar(100),confirmation bit,contact varchar(100),reception_date date,approval_holder varchar(100),address varchar(100),why varchar(255)); ", tolustur))
-                                    GrantOperationsCommand.ExecuteNonQuery();                               
+                                    GrantOperationsCommand.ExecuteNonQuery();
+                                /*Teknik servis dışarı tablosu*/
+                                using (SqlCommand GrantOperationsCommand = new SqlCommand("CREATE TABLE TechnicalService(id int IDENTITY(1,1),service_claimant varchar(100)," +
+                               "contact varchar(100),address varchar(100),product varchar(100),appointment_date date,fault varchar(255),fault_description varchar(255)); ", tolustur))
+                                    GrantOperationsCommand.ExecuteNonQuery();
 
                                 ProvinceInstallationDialog provinceInstallationDialog = new ProvinceInstallationDialog();
                                 DialogResult dialogResult1 = provinceInstallationDialog.ShowDialog();
@@ -218,12 +222,14 @@ namespace IBS_HR
                 onlinealtmenuControl = 1;
                 label9.Text = "Teknik | Hibe | Servis";
                 label9.Visible = true;
+                panel12.Visible = false;
             }
             else if (onlinealtmenuControl == 1)
             {
                 onlinealtmenu.Visible = false;
                 onlinealtmenuControl = 0;
                 label9.Text = "Ana Sayfa";
+                panel12.Visible = true;
             }
         }
         private void label2_Click(object sender, EventArgs e)
@@ -242,12 +248,14 @@ namespace IBS_HR
                 onlinealtmenuControl = 1;
                 label9.Text = "Teknik | Hibe | Servis";
                 label9.Visible = true;
+                panel12.Visible = false;
             }
             else if (onlinealtmenuControl == 1)
             {
                 onlinealtmenu.Visible = false;
                 onlinealtmenuControl = 0;
                 label9.Text = "Ana Sayfa";
+                panel12.Visible = true;
             }
         }
         private void panel7_Click(object sender, EventArgs e)
@@ -403,6 +411,136 @@ namespace IBS_HR
             servisListeForm.Dock = DockStyle.Fill;
             servisListeForm.Show();
             label9.Text = "Servis Liste";
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            HomeForm RandevuForm = new HomeForm();
+            RandevuForm.TopLevel = false;
+            RandevuForm.AutoScroll = true;
+            homePanel.Controls.Add(RandevuForm);
+            RandevuForm.Dock = DockStyle.Fill;
+            RandevuForm.Show();
+            if (onlinealtmenuControl == 0)
+            {
+                onlinealtmenu.Visible = true;
+                panel8.Visible = true;
+                onlinealtmenuControl = 1;
+                label9.Text = "Teknik | Hibe | Servis";
+                label9.Visible = true;
+                panel12.Visible = false;
+            }
+            else if (onlinealtmenuControl == 1)
+            {
+                onlinealtmenu.Visible = false;
+                onlinealtmenuControl = 0;
+                label9.Text = "Ana Sayfa";
+                panel12.Visible = true;
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            TeknikKayit teknikKayit = new TeknikKayit();
+            teknikKayit.TopLevel = false;
+            teknikKayit.AutoScroll = true;
+            homePanel.Controls.Add(teknikKayit);
+            teknikKayit.Dock = DockStyle.Fill;
+            teknikKayit.Show();
+            label9.Text = "Teknik Servis Kayıt";
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            TeknikİslemlerForm teknikİslemlerForm = new TeknikİslemlerForm();
+            teknikİslemlerForm.TopLevel = false;
+            teknikİslemlerForm.AutoScroll = true;
+            homePanel.Controls.Add(teknikİslemlerForm);
+            teknikİslemlerForm.Dock = DockStyle.Fill;
+            teknikİslemlerForm.Show();
+            label9.Text = "Teknik İşlemler";
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            TeknikListeForm teknikListe = new TeknikListeForm();
+            teknikListe.TopLevel = false;
+            teknikListe.AutoScroll = true;
+            homePanel.Controls.Add(teknikListe);
+            teknikListe.Dock = DockStyle.Fill;
+            teknikListe.Show();
+            label9.Text = "Teknik İşleme Alınanlar";
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            HibeKayıt hibeKayıt = new HibeKayıt();
+            hibeKayıt.TopLevel = false;
+            hibeKayıt.AutoScroll = true;
+            homePanel.Controls.Add(hibeKayıt);
+            hibeKayıt.Dock = DockStyle.Fill;
+            hibeKayıt.Show();
+            label9.Text = "Hibe Kayıt";
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            HibeListe hibeListe = new HibeListe();
+            hibeListe.TopLevel = false;
+            hibeListe.AutoScroll = true;
+            homePanel.Controls.Add(hibeListe);
+            hibeListe.Dock = DockStyle.Fill;
+            hibeListe.Show();
+            label9.Text = "Hibe Liste";
+        }
+
+        private void pictureBox10_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            Servis_Kayıt servis_Kayıt = new Servis_Kayıt();
+            servis_Kayıt.TopLevel = false;
+            servis_Kayıt.AutoScroll = true;
+            homePanel.Controls.Add(servis_Kayıt);
+            servis_Kayıt.Dock = DockStyle.Fill;
+            servis_Kayıt.Show();
+            label9.Text = "Servis Kayıt";
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            homePanel.Controls.Clear();
+            ServisListeForm servisListeForm = new ServisListeForm();
+            servisListeForm.TopLevel = false;
+            servisListeForm.AutoScroll = true;
+            homePanel.Controls.Add(servisListeForm);
+            servisListeForm.Dock = DockStyle.Fill;
+            servisListeForm.Show();
+            label9.Text = "Servis Liste";
+        }
+
+        private void pictureBox9_Click(object sender, EventArgs e)
+        {
+            ExitDialog CikisDialog = new ExitDialog();
+            // Show testDialog as a modal dialog and determine if DialogResult = OK.
+            if (CikisDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                //do processing
+            }
+            else
+            {
+                //do processing
+            }
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

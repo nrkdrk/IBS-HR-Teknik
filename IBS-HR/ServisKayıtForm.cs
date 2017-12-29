@@ -22,34 +22,47 @@ namespace IBS_HR
 
         private void button4_Click(object sender, EventArgs e)
         {
-            string dbName = "IBSHR";
-            SqlConnection connection = new SqlConnection("server=.\\SQLEXPRESS;database=master; Integrated Security=SSPI");
-            SqlCommand command = new SqlCommand("SELECT Count(name) FROM master.dbo.sysdatabases WHERE name=@prmVeritabani", connection);
-            command.Parameters.AddWithValue("@prmVeriTabani", dbName);
-            connection.Open();
-            string connectionString = "server=.\\SQLEXPRESS; database=IBSHR; integrated security=SSPI; User id = sa; Password=nrkdrk;";
-            using (SqlConnection tolustur = new SqlConnection(connectionString))
+            String service_claimant = textBox1.Text;
+            String contact = textBox4.Text;
+            String address = textBox6.Text;
+            String product = textBox2.Text;
+            String appointment_date = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            String fault = textBox3.Text;
+            String fault_description = textBox5.Text;
             try
             {
-                    string query = "insert into TechnicalRecord (id, owner,contact,address,product,delivery_date,accessory,explanation)" +
-                    " VALUES (@id,@name,@contact,@address,@product,@delivery_date,@accessory,@explanation)";
-                    using (SqlCommand querySaveStaff = new SqlCommand(query))
-                    {
-                        querySaveStaff.Connection = tolustur;
-                        querySaveStaff.Parameters.Add("@name", SqlDbType.VarChar, 30).Value = "Berk";
-                        querySaveStaff.Parameters.Add("@contact", SqlDbType.VarChar, 30).Value = "05051102956";
-                        querySaveStaff.Parameters.Add("@address", SqlDbType.VarChar, 30).Value = "asdasdasdasdasdsa";
-                        querySaveStaff.Parameters.Add("@product", SqlDbType.VarChar, 30).Value = "Besadasdasdsadasdasdrk";
-                        querySaveStaff.Parameters.Add("@delivery_date", SqlDbType.VarChar, 30).Value = "27.11.2017";
-                        querySaveStaff.Parameters.Add("@accessory", SqlDbType.VarChar, 30).Value = "asdasdasdsadasdad";
-                        querySaveStaff.Parameters.Add("@explanation", SqlDbType.VarChar, 30).Value = "dasdasdasdasdasdasd";
-                        tolustur.Open();
-                    }
-
+                SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-R7MNN89\SQLEXPRESS;Initial Catalog=IBSHR;User ID=sa;Password=nrkdrk");
+                sqlConnection.Open();
+                SqlCommand sqlCommand = new SqlCommand("INSERT INTO TechnicalService(service_claimant,contact,address,product,appointment_date,fault,fault_description)" +
+                " VALUES (@service_claimant,@contact,@address,@product,@appointment_date,@fault,@fault_description)", sqlConnection);
+                sqlCommand.Parameters.Add("@service_claimant", service_claimant);
+                sqlCommand.Parameters.Add("@contact", contact);
+                sqlCommand.Parameters.Add("@address", address);
+                sqlCommand.Parameters.Add("@product", product);
+                sqlCommand.Parameters.Add("@appointment_date", appointment_date);
+                sqlCommand.Parameters.Add("@fault", fault);
+                sqlCommand.Parameters.Add("@fault_description", fault_description);
+                sqlCommand.ExecuteNonQuery();
+                textBox1.Text = String.Empty;
+                textBox2.Text = String.Empty;
+                textBox3.Text = String.Empty;
+                textBox4.Text = String.Empty;
+                textBox5.Text = String.Empty;
+                textBox6.Text = String.Empty;
+                SavedDialogForm savedDialogForm = new SavedDialogForm();
+                DialogResult dialogResult = savedDialogForm.ShowDialog();
+                if (dialogResult == DialogResult.OK)
+                {
+                    //do processing
                 }
+                else
+                {
+                    //do processing
+                }
+            }
             catch (Exception ex)
             {
-                MessageBox.Show("Kurgu Hazırlanırken Hata." + ex.Message);
+                MessageBox.Show("Veritabanına eklenirken hata oluştu. Hata: " + ex.Message);
             }
         }
     }

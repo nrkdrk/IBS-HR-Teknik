@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AnaMenu));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.exitPanel = new System.Windows.Forms.Panel();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
@@ -66,6 +69,8 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.homePanel = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             this.exitPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -94,6 +99,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.exitPanel);
             this.panel1.Controls.Add(this.onlinealtmenu);
             this.panel1.Controls.Add(this.panel4);
@@ -103,6 +109,35 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(200, 625);
             this.panel1.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.pictureBox12);
+            this.panel12.Controls.Add(this.label12);
+            this.panel12.Location = new System.Drawing.Point(0, 111);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(200, 52);
+            this.panel12.TabIndex = 4;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
+            this.pictureBox12.Location = new System.Drawing.Point(12, 9);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(27, 32);
+            this.pictureBox12.TabIndex = 1;
+            this.pictureBox12.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(39, 15);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(153, 18);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Logo Çözüm İşlemleri";
             // 
             // exitPanel
             // 
@@ -133,6 +168,7 @@
             this.pictureBox9.Size = new System.Drawing.Size(33, 30);
             this.pictureBox9.TabIndex = 4;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.pictureBox9_Click);
             // 
             // label10
             // 
@@ -179,6 +215,7 @@
             this.pictureBox11.Size = new System.Drawing.Size(33, 30);
             this.pictureBox11.TabIndex = 3;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
             // 
             // label11
             // 
@@ -210,6 +247,7 @@
             this.pictureBox10.Size = new System.Drawing.Size(33, 30);
             this.pictureBox10.TabIndex = 3;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
             // 
             // label8
             // 
@@ -241,6 +279,7 @@
             this.pictureBox4.Size = new System.Drawing.Size(33, 33);
             this.pictureBox4.TabIndex = 3;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
             // label3
             // 
@@ -272,6 +311,7 @@
             this.pictureBox7.Size = new System.Drawing.Size(33, 32);
             this.pictureBox7.TabIndex = 3;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
             // 
             // label7
             // 
@@ -303,6 +343,7 @@
             this.pictureBox5.Size = new System.Drawing.Size(33, 32);
             this.pictureBox5.TabIndex = 3;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // label6
             // 
@@ -347,6 +388,7 @@
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox6.TabIndex = 3;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // panel7
             // 
@@ -366,6 +408,7 @@
             this.pictureBox3.Size = new System.Drawing.Size(32, 32);
             this.pictureBox3.TabIndex = 2;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // label4
             // 
@@ -388,6 +431,7 @@
             this.panel4.Size = new System.Drawing.Size(200, 52);
             this.panel4.TabIndex = 3;
             this.panel4.Click += new System.EventHandler(this.panel4_Click);
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // pictureBox2
             // 
@@ -397,6 +441,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(27, 32);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label2
             // 
@@ -492,6 +537,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "themeContainer1";
             this.panel1.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             this.exitPanel.ResumeLayout(false);
             this.exitPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -568,6 +616,9 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.Label label12;
     }
 }
 

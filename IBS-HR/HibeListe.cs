@@ -27,13 +27,12 @@ namespace IBS_HR
             using (sqlConnection)
             {
                 sqlConnection.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter("select * from GrantOperations order by id desc", sqlConnection);
+                SqlDataAdapter adapter = new SqlDataAdapter("select * from GrantOperations order by id desc ", sqlConnection);
                 DataSet ds = new DataSet();
                 adapter.Fill(ds);
                 dataGridView1.DataSource = ds.Tables[0];
                 dataGridView1.Refresh();
             }
-
             dataGridView1.Columns[0].HeaderText = "İd";
             dataGridView1.Columns[1].HeaderText = "Ürün Sahibi";
             dataGridView1.Columns[2].HeaderText = "Ürün";

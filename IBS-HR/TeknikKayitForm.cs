@@ -63,8 +63,7 @@ namespace IBS_HR
             catch (Exception ex)
             {
                 MessageBox.Show("Veritabanına eklenirken hata oluştu. Hata: " + ex.Message);
-            }
-            
+            }           
         }
     }
 }

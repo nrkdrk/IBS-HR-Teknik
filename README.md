@@ -6,13 +6,13 @@ IBS-HR-Teknik Servis takip uygulaması
 
 | Menu   | Detay(Detail) |
 | ------ | ------ |
-| Teknik Kayıt | |
-| Teknik İşlemler | |
-| Teknik Liste | |
-| Hibe Kayıt | |
-| Hibe Liste | |
-| Servis Kayıt | |
-| Servis Listesi |  |
+| Teknik Kayıt | Servis bölümüne gelen cihazların kayıt sistemi |
+| Teknik İşlemler | Servise girişi yapılan cihazların işleme alınması |
+| Teknik Liste | Teknik işleme alınan cihazlar(tamamlanan ve tamamlanmayan) |
+| Hibe Kayıt | Servise(Firmaya) hibe edilme|
+| Hibe Liste | Firmaya hibe edilen cihaz kayıtları|
+| Servis Kayıt | Dışarı teknik servis kaydı |
+| Servis Listesi | Dışarı teknik servis listesi |
 
 Ana Menü(Main Menu)
 ![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/AnaMenu.PNG)
@@ -25,3 +25,6 @@ Teknik Kayıt(Technical Registration)
 
 Teknik İslemler(Technical Works)
 ![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/Teknikİslemler.PNG)
+
+Projede Veri Tabanı olarak SQL Server 2012 kullanılmıştır.
+![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/sql-server-2012-logo.jpg)

@@ -33,7 +33,7 @@ Projedeki bütün veri tabanı tabloları proje içerisinde ana sınıf(class) i
 Dikkat edilmesi gerek nokta Server bağlantı bilgileri static olarak kodlar içersinde o bilgileri güncellemeniz gerekmektedir.
 
 
-
+```javascript
 
 function test(){
     console.log("Hello world!");
@@ -61,3 +61,4 @@ function test(){
 })();
 var testBox = box();
 testBox.add("jQuery").remove("jQuery");
+```

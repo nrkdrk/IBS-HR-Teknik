@@ -31,3 +31,33 @@ Projede Veri Tabanı olarak SQL Server 2012 kullanılmıştır.
 
 Projedeki bütün veri tabanı tabloları proje içerisinde ana sınıf(class) içerisinde kodla hazırlanmıştır.
 Dikkat edilmesi gerek nokta Server bağlantı bilgileri static olarak kodlar içersinde o bilgileri güncellemeniz gerekmektedir.
+
+
+
+
+function test(){
+    console.log("Hello world!");
+}
+(function(){
+    var box = function(){
+        return box.fn.init();
+    };
+    box.prototype = box.fn = {
+        init : function(){
+            console.log('box.init()');
+            return this;
+        },
+        add : function(str){
+            alert("add", str);
+            return this;
+        },
+        remove : function(str){
+            alert("remove", str);
+            return this;
+        }
+    };
+    box.fn.init.prototype = box.fn;
+    window.box =box;
+})();
+var testBox = box();
+testBox.add("jQuery").remove("jQuery");

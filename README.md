@@ -25,3 +25,6 @@ Teknik Kayıt(Technical Registration)
 
 Teknik İslemler(Technical Works)
 ![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/Teknikİslemler.PNG)
+
+Projede Veri Tabanı olarak SQL Server 2012 kullanılmıştır.
+![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/sql-server-2012-logo.jpg)

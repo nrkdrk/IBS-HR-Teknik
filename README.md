@@ -127,3 +127,12 @@ static Boolean SqlConn()
             return processResult;
         }
 ```
+2. try catch bloğu içerisinde 
+```c#
+/*Teknik servis dışarı tablosu*/
+using (SqlCommand GrantOperationsCommand = new SqlCommand("CREATE TABLE TechnicalService(id int IDENTITY(1,1),service_claimant varchar(100)," +
+"contact varchar(100),address varchar(100),product varchar(100),appointment_date date,fault varchar(255),fault_description varchar(255)); ", tolustur))
+GrantOperationsCommand.ExecuteNonQuery();
+```
+şeklinde bir kod parçası bulunmaktadır. Bu kod parçası Teknik Servis Dışarı tablosu(TechnicalService)nu oluşturuyor.
+Bu kodlarda görüldüğü gibi tablo sütunları ve sütun özellikleri belirlenmiş durumda. İsteğe göre bu özellikler güncellenebilir.

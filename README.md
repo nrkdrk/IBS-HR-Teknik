@@ -137,3 +137,4 @@ GrantOperationsCommand.ExecuteNonQuery();
 şeklinde bir kod parçası bulunmaktadır. Bu kod parçası Teknik Servis Dışarı tablosu(TechnicalService)nu oluşturuyor.
 Bu kodlarda görüldüğü gibi tablo sütunları ve sütun özellikleri belirlenmiş durumda. İsteğe göre bu özellikler güncellenebilir.
 Bu kodlama yöntemi sayesinde Sql Server'ı açmaya gerek kalmaksızın tabloları ve tablo detaylarını ayarlamamız mümkün hale geldi.
+Diğer tablolarda aynı yöntem ile oluşturulmuş durumdadır.

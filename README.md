@@ -28,3 +28,6 @@ Teknik İslemler(Technical Works)
 
 Projede Veri Tabanı olarak SQL Server 2012 kullanılmıştır.
 ![alt text](https://github.com/nrkdrk/IBS-HR-Teknik/blob/master/images/sql-server-2012-logo.jpg)
+
+Projedeki bütün veri tabanı tabloları proje içerisinde ana sınıf(class) içerisinde kodla hazırlanmıştır.
+Dikkat edilmesi gerek nokta Server bağlantı bilgileri static olarak kodlar içersinde o bilgileri güncellemeniz gerekmektedir.

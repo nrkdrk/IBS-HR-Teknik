@@ -34,7 +34,7 @@ Dikkat edilmesi gerek nokta Server bağlantı bilgileri static olarak static Boo
 
 
 ```c#
-
+//Sql Connection(SQL Server Bağşan Fonksiyonu)
 static Boolean SqlConn()
         {
             Boolean processResult = false;

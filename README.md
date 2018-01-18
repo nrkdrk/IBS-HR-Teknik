@@ -138,7 +138,6 @@ GrantOperationsCommand.ExecuteNonQuery();
 Bu kodlarda görüldüğü gibi tablo sütunları ve sütun özellikleri belirlenmiş durumda. İsteğe göre bu özellikler güncellenebilir.
 Bu kodlama yöntemi sayesinde Sql Server'ı açmaya gerek kalmaksızın tabloları ve tablo detaylarını ayarlamamız mümkün hale geldi.
 
-
 ```mermaid
 sequenceDiagram
 Alice ->> Bob: Hello Bob, how are you?

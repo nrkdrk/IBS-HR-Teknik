@@ -35,30 +35,95 @@ Dikkat edilmesi gerek nokta Server bağlantı bilgileri static olarak kodlar iç
 
 ```javascript
 
-function test(){
-    console.log("Hello world!");
-}
-(function(){
-    var box = function(){
-        return box.fn.init();
-    };
-    box.prototype = box.fn = {
-        init : function(){
-            console.log('box.init()');
-            return this;
-        },
-        add : function(str){
-            alert("add", str);
-            return this;
-        },
-        remove : function(str){
-            alert("remove", str);
-            return this;
+static Boolean SqlConn()
+        {
+            Boolean processResult = false;
+            try
+            {
+                string dbName = "IBSHR";
+                SqlConnection connection = new SqlConnection("server=.\\SQLEXPRESS;database=master; Integrated Security=SSPI");
+                SqlCommand command = new SqlCommand("SELECT Count(name) FROM master.dbo.sysdatabases WHERE name=@prmVeritabani", connection);
+                command.Parameters.AddWithValue("@prmVeriTabani", dbName);
+                connection.Open();
+
+                int sonuc = (int)command.ExecuteScalar();
+                if (sonuc != 0)
+                {
+                    SuccessfulDialog successfulDialog = new SuccessfulDialog();
+                    DialogResult dialogResult = successfulDialog.ShowDialog();
+                    if (dialogResult == DialogResult.OK)
+                    {
+                        //do processing
+                    }
+                    else
+                    {
+                        //do processing
+                    }
+                    processResult = true;
+                }
+                else
+                {
+                    DialogResult dialogResult = MessageBox.Show("Programı İlk Defa Kullanıdığınız Tespit Edildi.\n Veri Tabanı Kurulumu Yapılsın mı ?", "IBS-HR Teknik Servis", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        command.CommandText = "Create Database " + dbName;
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                        string connectionString = "server=.\\SQLEXPRESS; database=IBSHR; integrated security=SSPI; User id = sa; Password=nrkdrk;";
+                        using (SqlConnection tolustur = new SqlConnection(connectionString))
+                            try
+                            {
+                                /*Veri tabanında tablolarımızı oluşturuyoruz*/
+                                tolustur.Open();
+                                /*Teknik Servis kayıt Tablosu*/
+                                using (SqlCommand TechnicalRecordCommand = new SqlCommand("CREATE TABLE TechnicalRecord(id int IDENTITY(1,1),owner varchar(100)," +
+                                "contact varchar(255),address varchar(255),product varchar(100),delivery_date date,accessory varchar(255),explanation varchar(255));", tolustur))
+                                    TechnicalRecordCommand.ExecuteNonQuery();
+                                /*Teknik İşlemler tablosu*/
+                                using (SqlCommand TechnicalOperationsCommand = new SqlCommand("CREATE TABLE TechnicalOperations(id int IDENTITY(1,1),TRId varchar(100)," +
+                                "processed bit,approval bit,operation varchar(100),reception_date date,fee varchar(255),completion_date date,operations_carried varchar(255)," +
+                                "forwarding bit,referral_clarification varchar(255),delivery bit); ", tolustur))
+                                    TechnicalOperationsCommand.ExecuteNonQuery();
+                                /*Hibe İşlemler tablosu*/
+                                using (SqlCommand GrantOperationsCommand = new SqlCommand("CREATE TABLE GrantOperations(id int IDENTITY(1,1),owner varchar(100)," +
+                                "product varchar(100),confirmation bit,contact varchar(100),reception_date date,approval_holder varchar(100),address varchar(100),why varchar(255)); ", tolustur))
+                                    GrantOperationsCommand.ExecuteNonQuery();
+                                /*Teknik servis dışarı tablosu*/
+                                using (SqlCommand GrantOperationsCommand = new SqlCommand("CREATE TABLE TechnicalService(id int IDENTITY(1,1),service_claimant varchar(100)," +
+                               "contact varchar(100),address varchar(100),product varchar(100),appointment_date date,fault varchar(255),fault_description varchar(255)); ", tolustur))
+                                    GrantOperationsCommand.ExecuteNonQuery();
+
+                                ProvinceInstallationDialog provinceInstallationDialog = new ProvinceInstallationDialog();
+                                DialogResult dialogResult1 = provinceInstallationDialog.ShowDialog();
+                                if (dialogResult1 == DialogResult.OK)
+                                {
+                                    //do processing
+                                }
+                                else
+                                {
+                                    //do processing
+                                }
+                                processResult = true;
+                            }
+                            catch (Exception ex)
+                            {
+                                MessageBox.Show("Kurgu Hazırlanırken Hata." + ex.Message);
+                                processResult = false;
+                            }
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        processResult = false;
+                    }
+                }
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Yerel Sunucu İle Bağlantı Başarısız. \n" + ex.Message);
+                MessageBox.Show("Yerel Sunucu Bağlantısı Başarısız. Giriş Yapılamaz.");
+                processResult = false;
+            }
+            return processResult;
         }
-    };
-    box.fn.init.prototype = box.fn;
-    window.box =box;
-})();
-var testBox = box();
-testBox.add("jQuery").remove("jQuery");
 ```
